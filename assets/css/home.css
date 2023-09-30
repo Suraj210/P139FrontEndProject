@@ -27,6 +27,15 @@ a {
   height: 100px;
 }
 
+.sideDrop {
+  background-color: white;
+  width: 200px;
+  transform: translateX(30px);
+}
+.sideDrop ul {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-top {
     font-size: 13px;
@@ -195,6 +204,57 @@ a {
     display: inline-flex;
     margin-top: 10px;
   }
+  .nav-bottom_sideBar {
+    width: 320px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    padding-top: 20px;
+  }
+  .nav-bottom_sideBar .sideBar-logo {
+    padding: 0 20px;
+  }
+  .nav-bottom_sideBar .sideBar-logo .sideBarImg {
+    width: 35%;
+  }
+  .nav-bottom_sideBar .sideBar-logo .sideBarImg img {
+    width: 100%;
+  }
+  .nav-bottom_sideBar .sideBar-logo .sideBar-close {
+    background-color: gray;
+    color: black;
+    padding: 5px 7px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .nav-bottom_sideBar .sideBar-logo .sideBar-close i {
+    font-size: 15px;
+  }
+  .nav-bottom_sideBar .sideBarMainMenu {
+    padding: 20px 20px;
+  }
+  .nav-bottom_sideBar .sideBarMainMenu span {
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+  .nav-bottom_sideBar .sideBarMainMenu ul li {
+    position: relative;
+  }
+  .nav-bottom_sideBar .sideBarMainMenu ul li a {
+    line-height: 50px;
+  }
+  .nav-bottom_sideBar .sideBarMainMenu ul li i {
+    cursor: pointer;
+  }
+  .nav-bottom_sideBar .sideBarMainMenu .sideBar-offer span {
+    background-color: green;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .nav-top {
@@ -203,12 +263,18 @@ a {
   .nav-bottom_menu {
     display: none;
   }
+  .right-icons {
+    display: none;
+  }
 }
 @media only screen and (max-width: 576px) {
   .nav-top {
     display: none;
   }
   .nav-bottom_menu {
+    display: none;
+  }
+  .right-icons {
     display: none;
   }
 }/*# sourceMappingURL=home.css.map */
