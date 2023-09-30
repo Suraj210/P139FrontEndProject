@@ -36,6 +36,8 @@ currency.addEventListener("mouseout", function (e) {
   dropDownCurr.classList.toggle("d-none");
 });
 
+// Bottom Navigation
+
 dropMenu.forEach((elem) => {
   elem.addEventListener("mouseover", function (e) {
     e.preventDefault();
@@ -46,4 +48,24 @@ dropMenu.forEach((elem) => {
     e.preventDefault();
     this.children[1].classList.toggle("d-none");
   });
+});
+
+let searchOpen = document.querySelector(".search-open");
+let searchClose = document.querySelector(".search-close");
+let searchAreaClose = document.querySelector(".nav-area_close");
+let searchArea = document.querySelector(".nav-search");
+
+searchOpen.addEventListener("click", function (e) {
+  e.preventDefault();
+  searchOpen.classList.toggle("d-none");
+  searchClose.classList.toggle("d-none");
+  searchArea.classList.toggle("d-none");
+  document.querySelector("body").style.overflow = "hidden";
+});
+
+searchAreaClose.addEventListener("click", function () {
+  searchArea.classList.toggle("d-none");
+  searchClose.classList.toggle("d-none");
+  searchOpen.classList.toggle("d-none");
+  document.querySelector("body").style.overflow = "initial";
 });
