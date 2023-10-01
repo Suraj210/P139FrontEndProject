@@ -1,8 +1,8 @@
 "use strict";
 
-// Header starts
+// --------------------Header starts--------------------
 
-// Top Navigation
+// --------------------Top Navigation--------------------
 
 let navSocial = document.querySelector("header .nav-top_social");
 let navDropdownSocial = document.querySelector(".nav-top_social--dropDown");
@@ -36,7 +36,7 @@ currency.addEventListener("mouseout", function (e) {
   dropDownCurr.classList.toggle("d-none");
 });
 
-// Bottom Navigation
+// --------------------Bottom Navigation--------------------
 
 dropMenu.forEach((elem) => {
   elem.addEventListener("mouseover", function (e) {
@@ -50,7 +50,7 @@ dropMenu.forEach((elem) => {
   });
 });
 
-// Search
+//-------------------- Search--------------------
 
 let searchOpen = document.querySelector(".search-open");
 let searchClose = document.querySelector(".search-close");
@@ -74,7 +74,7 @@ searchAreaClose.addEventListener("click", function () {
   document.querySelector("body").style.overflow = "initial";
 });
 
-// Side bar
+// --------------------Side bar--------------------
 
 let sideDropIcon = document.querySelectorAll(".sideDropIcon");
 
@@ -85,7 +85,7 @@ sideDropIcon.forEach((drop) => {
   });
 });
 
-// Side bar toggle
+// --------------------Side bar toggle --------------------
 
 let sideBar = document.querySelector(".nav-bottom_sideBar");
 let sideBarToggle = document.querySelectorAll(".sideBarToggle");
@@ -102,3 +102,7 @@ overlay.addEventListener("click", function () {
   overlay.classList.toggle("d-none");
   sideBar.classList.toggle("transformLeft");
 });
+
+// -------------------- Header ends --------------------
+
+// Footer

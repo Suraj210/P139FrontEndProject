@@ -23,13 +23,13 @@ a {
   color: black;
 }
 
-// Helper classes ----------------------
+// --------------------Helper classes ----------------------
 
 .mouseOverHeight {
   height: 100px;
 }
 
-// Drop menus in sideBar ----------------------
+// --------------------Drop menus in sideBar ----------------------
 .sideDrop {
   background-color: white;
   width: 200px;
@@ -46,12 +46,12 @@ a {
   color: gray;
 }
 
-//Computer width ----------------------
+//--------------------Computer width ----------------------
 @media only screen and (min-width: 768px) {
-  // Header starts
+  //--------------------Header starts ----------------------
 
   header {
-    // Top Navigation ----------------------
+    // --------------------Top Navigation ----------------------
     .nav-top {
       // height: 10%;
       font-size: 13px;
@@ -142,7 +142,7 @@ a {
       }
     }
 
-    // Bottom Navigation ----------------------
+    // --------------------Bottom Navigation ----------------------
 
     .nav-bottom {
       border-bottom: 1px solid rgb(214, 214, 214);
@@ -232,7 +232,7 @@ a {
       }
     }
 
-    // Search ----------------------
+    // --------------------Search ----------------------
 
     .nav-search {
       position: fixed;
@@ -266,7 +266,7 @@ a {
       }
     }
 
-    // Side Bar ----------------------
+    // --------------------Side Bar ----------------------
     .nav-bottom_sideBar {
       overflow-y: scroll;
       height: 100vh;
@@ -347,44 +347,327 @@ a {
       z-index: 3;
     }
   }
+
+  //--------------------Header ends ----------------------
+
+  //--------------------Footer starts ----------------------
+
+  footer {
+    .topFooter {
+      background-color: black;
+      padding: 80px;
+
+      .topFooter-text {
+        h3 {
+          font-weight: 500;
+          color: white;
+          max-width: 400px;
+        }
+
+        p {
+          color: rgb(214, 214, 214);
+          padding-bottom: 40px;
+        }
+      }
+      .topFooter-left-form {
+        form {
+          input {
+            width: 60%;
+            height: 35px;
+            padding: 20px 10px;
+            outline: none;
+          }
+          button {
+            padding: 9px 18px;
+            outline: none;
+            border: 1 px solid rgb(214, 214, 214);
+            margin-left: -5px;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .topFooterSpan {
+        color: gray;
+        font-size: 12px;
+        margin-top: 15px;
+        display: inline-block;
+      }
+    }
+
+    .middleFooter {
+      padding: 30px;
+      .middleFooter-logo {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        max-width: 300px;
+        text-align: justify;
+        padding-top: 20px;
+      }
+
+      h6 {
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .bottomFooter {
+      padding: 30px;
+      p {
+        font-size: 14px;
+      }
+
+      .footer-end {
+        text-align: end;
+        a {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  //--------------------Footer ends ----------------------
 }
 
-//Tablet width ----------------------
+//--------------------Tablet width ----------------------
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-  // Header starts
+  // --------------------Header starts
+  header {
+    // --------------------Top Navigation ----------------------
+    .nav-top {
+      display: none;
+    }
 
-  // Top Navigation ----------------------
-  .nav-top {
-    display: none;
+    // --------------------Bottom Navigation ----------------------
+
+    .nav-bottom_menu {
+      display: none;
+    }
+
+    .right-icons {
+      display: none;
+    }
   }
 
-  // Bottom Navigation ----------------------
+  //--------------------Header ends ----------------------
 
-  .nav-bottom_menu {
-    display: none;
+  //--------------------Footer starts ----------------------
+
+  footer {
+    .topFooter {
+      background-color: black;
+      padding: 80px;
+
+      .topFooter-text {
+        margin-top: 60px;
+        h3 {
+          font-weight: 500;
+          color: white;
+          max-width: 400px;
+        }
+
+        p {
+          color: rgb(214, 214, 214);
+          padding-bottom: 40px;
+        }
+      }
+      .topFooter-left-form {
+        form {
+          input {
+            width: 60%;
+            height: 35px;
+            padding: 20px 10px;
+            outline: none;
+          }
+          button {
+            padding: 9px 18px;
+            outline: none;
+            border: 1 px solid rgb(214, 214, 214);
+            margin-left: -5px;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .topFooterSpan {
+        color: gray;
+        font-size: 12px;
+        margin-top: 15px;
+        display: inline-block;
+      }
+    }
+
+    .middleFooter {
+      padding: 30px;
+      .middleFooter-logo {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        max-width: 300px;
+        text-align: justify;
+        padding-top: 20px;
+      }
+
+      h6 {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        font-weight: 700;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .bottomFooter {
+      padding: 30px;
+      p {
+        font-size: 14px;
+      }
+      .footer-end {
+        margin-top: 20px;
+        text-align: center;
+        a {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 
-  .right-icons {
-    display: none;
-  }
+  //--------------------Footer ends ----------------------
 }
 
-//Phone width ----------------------
+//--------------------Phone width ----------------------
 @media only screen and (max-width: 576px) {
-  // Header starts
+  // --------------------Header starts
 
-  // Top Navigation ----------------------
-  .nav-top {
-    display: none;
+  header {
+    // --------------------Top Navigation ----------------------
+    .nav-top {
+      display: none;
+    }
+
+    // --------------------Bottom Navigation ----------------------
+
+    .nav-bottom_menu {
+      display: none;
+    }
+
+    .right-icons {
+      display: none;
+    }
   }
 
-  // Bottom Navigation ----------------------
+  //--------------------Header ends ----------------------
 
-  .nav-bottom_menu {
-    display: none;
+  //--------------------Footer starts ----------------------
+
+  footer {
+    .topFooter {
+      background-color: black;
+      padding: 80px;
+
+      .topFooter-text {
+        margin-top: 60px;
+        h3 {
+          font-weight: 500;
+          color: white;
+          max-width: 400px;
+        }
+
+        p {
+          color: rgb(214, 214, 214);
+          padding-bottom: 40px;
+        }
+      }
+      .topFooter-left-form {
+        form {
+          input {
+            width: 60%;
+            height: 35px;
+            padding: 20px 10px;
+            outline: none;
+          }
+          button {
+            padding: 9px 18px;
+            outline: none;
+            border: 1 px solid rgb(214, 214, 214);
+            margin-left: -5px;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .topFooterSpan {
+        color: gray;
+        font-size: 12px;
+        margin-top: 15px;
+        display: inline-block;
+      }
+    }
+
+    .middleFooter {
+      padding: 30px;
+      .middleFooter-logo {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        max-width: 300px;
+        text-align: justify;
+        padding-top: 20px;
+      }
+
+      h6 {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        font-weight: 700;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .bottomFooter {
+      padding: 30px;
+      p {
+        font-size: 14px;
+      }
+      .footer-end {
+        margin-top: 20px;
+        text-align: center;
+        a {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 
-  .right-icons {
-    display: none;
-  }
+  //--------------------Footer ends ----------------------
 }

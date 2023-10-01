@@ -280,26 +280,243 @@ a {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
   }
+  footer .topFooter {
+    background-color: black;
+    padding: 80px;
+  }
+  footer .topFooter .topFooter-text h3 {
+    font-weight: 500;
+    color: white;
+    max-width: 400px;
+  }
+  footer .topFooter .topFooter-text p {
+    color: rgb(214, 214, 214);
+    padding-bottom: 40px;
+  }
+  footer .topFooter .topFooter-left-form form input {
+    width: 60%;
+    height: 35px;
+    padding: 20px 10px;
+    outline: none;
+  }
+  footer .topFooter .topFooter-left-form form button {
+    padding: 9px 18px;
+    outline: none;
+    border: 1 px solid rgb(214, 214, 214);
+    margin-left: -5px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  footer .topFooter .topFooterSpan {
+    color: gray;
+    font-size: 12px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  footer .middleFooter {
+    padding: 30px;
+  }
+  footer .middleFooter .middleFooter-logo {
+    width: 40%;
+  }
+  footer .middleFooter .middleFooter-logo img {
+    width: 100%;
+  }
+  footer .middleFooter p {
+    max-width: 300px;
+    text-align: justify;
+    padding-top: 20px;
+  }
+  footer .middleFooter h6 {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  footer .middleFooter a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  footer .bottomFooter {
+    padding: 30px;
+  }
+  footer .bottomFooter p {
+    font-size: 14px;
+  }
+  footer .bottomFooter .footer-end {
+    text-align: end;
+  }
+  footer .bottomFooter .footer-end a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-  .nav-top {
+  header .nav-top {
     display: none;
   }
-  .nav-bottom_menu {
+  header .nav-bottom_menu {
     display: none;
   }
-  .right-icons {
+  header .right-icons {
     display: none;
+  }
+  footer .topFooter {
+    background-color: black;
+    padding: 80px;
+  }
+  footer .topFooter .topFooter-text {
+    margin-top: 60px;
+  }
+  footer .topFooter .topFooter-text h3 {
+    font-weight: 500;
+    color: white;
+    max-width: 400px;
+  }
+  footer .topFooter .topFooter-text p {
+    color: rgb(214, 214, 214);
+    padding-bottom: 40px;
+  }
+  footer .topFooter .topFooter-left-form form input {
+    width: 60%;
+    height: 35px;
+    padding: 20px 10px;
+    outline: none;
+  }
+  footer .topFooter .topFooter-left-form form button {
+    padding: 9px 18px;
+    outline: none;
+    border: 1 px solid rgb(214, 214, 214);
+    margin-left: -5px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  footer .topFooter .topFooterSpan {
+    color: gray;
+    font-size: 12px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  footer .middleFooter {
+    padding: 30px;
+  }
+  footer .middleFooter .middleFooter-logo {
+    width: 40%;
+  }
+  footer .middleFooter .middleFooter-logo img {
+    width: 100%;
+  }
+  footer .middleFooter p {
+    max-width: 300px;
+    text-align: justify;
+    padding-top: 20px;
+  }
+  footer .middleFooter h6 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: 700;
+  }
+  footer .middleFooter a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  footer .bottomFooter {
+    padding: 30px;
+  }
+  footer .bottomFooter p {
+    font-size: 14px;
+  }
+  footer .bottomFooter .footer-end {
+    margin-top: 20px;
+    text-align: center;
+  }
+  footer .bottomFooter .footer-end a {
+    font-size: 14px;
+    margin-left: 10px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .nav-top {
+  header .nav-top {
     display: none;
   }
-  .nav-bottom_menu {
+  header .nav-bottom_menu {
     display: none;
   }
-  .right-icons {
+  header .right-icons {
     display: none;
+  }
+  footer .topFooter {
+    background-color: black;
+    padding: 80px;
+  }
+  footer .topFooter .topFooter-text {
+    margin-top: 60px;
+  }
+  footer .topFooter .topFooter-text h3 {
+    font-weight: 500;
+    color: white;
+    max-width: 400px;
+  }
+  footer .topFooter .topFooter-text p {
+    color: rgb(214, 214, 214);
+    padding-bottom: 40px;
+  }
+  footer .topFooter .topFooter-left-form form input {
+    width: 60%;
+    height: 35px;
+    padding: 20px 10px;
+    outline: none;
+  }
+  footer .topFooter .topFooter-left-form form button {
+    padding: 9px 18px;
+    outline: none;
+    border: 1 px solid rgb(214, 214, 214);
+    margin-left: -5px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  footer .topFooter .topFooterSpan {
+    color: gray;
+    font-size: 12px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  footer .middleFooter {
+    padding: 30px;
+  }
+  footer .middleFooter .middleFooter-logo {
+    width: 40%;
+  }
+  footer .middleFooter .middleFooter-logo img {
+    width: 100%;
+  }
+  footer .middleFooter p {
+    max-width: 300px;
+    text-align: justify;
+    padding-top: 20px;
+  }
+  footer .middleFooter h6 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: 700;
+  }
+  footer .middleFooter a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  footer .bottomFooter {
+    padding: 30px;
+  }
+  footer .bottomFooter p {
+    font-size: 14px;
+  }
+  footer .bottomFooter .footer-end {
+    margin-top: 20px;
+    text-align: center;
+  }
+  footer .bottomFooter .footer-end a {
+    font-size: 14px;
+    margin-left: 10px;
   }
 }/*# sourceMappingURL=home.css.map */
