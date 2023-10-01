@@ -114,7 +114,7 @@
           <div class="row">
             <div class="col-9 d-flex align-items-center">
               <div class="sideBar-logo">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars sideBarToggle"></i>
               </div>
               <div class="nav-logo">
                 <img src="./assets/images/logo.png" alt="" />
@@ -214,10 +214,12 @@
                   <a href="">
                     <i class="fa-regular fa-user"></i>
                   </a>
+
                   <a href="">
                     <i class="fa-solid fa-magnifying-glass search-open"></i>
                     <i class="fa-solid fa-x search-close d-none"></i>
                   </a>
+
                   <a style="position: relative" href="">
                     <i class="fa-regular fa-heart"></i>
                     <span class="wishList-count">0</span>
@@ -238,20 +240,22 @@
       </nav>
 
       <!-- Side Bar -->
-      <div class="nav-bottom_sideBar">
+      <div class="nav-bottom_sideBar transformLeft">
         <!-- Side Bar Logo -->
         <div
           class="sideBar-logo d-flex justify-content-between align-items-center"
         >
           <div class="sideBarImg">
-            <a href="">
+            <a href="home.html">
               <img src="./assets/images/logo.png" alt="" />
             </a>
           </div>
           <div class="sideBar-close">
-            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark sideBarToggle"></i>
           </div>
         </div>
+
+        <!-- Side Bar Menu -->
 
         <div class="sideBarMainMenu">
           <span>Main Menu</span>
@@ -259,10 +263,10 @@
             <li>
               <div class="d-flex align-items-center justify-content-between">
                 <a href="">Home</a>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down sideDropIcon"></i>
               </div>
               <div class="sideDrop">
-                <ul>
+                <ul class="d-none">
                   <li><a href="">Home 1</a></li>
                   <li><a href="">Home 2</a></li>
                   <li><a href="">Home 3</a></li>
@@ -275,10 +279,10 @@
             <li>
               <div class="d-flex align-items-center justify-content-between">
                 <a href="">Shop</a>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down sideDropIcon"></i>
               </div>
               <div class="sideDrop">
-                <ul>
+                <ul class="d-none">
                   <li>
                     <div
                       class="d-flex align-items-center justify-content-between"
@@ -286,12 +290,12 @@
                       <a href="">Shop List</a>
                       <i
                         style="margin-right: -50px"
-                        class="fa-solid fa-chevron-down"
+                        class="fa-solid fa-chevron-down sideDropIcon"
                       >
                       </i>
                     </div>
                     <div class="sideDrop">
-                      <ul>
+                      <ul class="d-none">
                         <li><a href="">Shop Default</a></li>
                         <li><a href="">Shop Right Sidebar</a></li>
                         <li><a href="">Shop Wide</a></li>
@@ -308,12 +312,12 @@
                       <a href="">Product Details</a>
                       <i
                         style="margin-right: -50px"
-                        class="fa-solid fa-chevron-down"
+                        class="fa-solid fa-chevron-down sideDropIcon"
                       >
                       </i>
                     </div>
                     <div class="sideDrop">
-                      <ul>
+                      <ul class="d-none">
                         <li><a href="">Product Variable</a></li>
                         <li><a href="">Product Default</a></li>
                         <li><a href="">Product Grouped</a></li>
@@ -331,12 +335,12 @@
                       <a href="">Shop Pages</a>
                       <i
                         style="margin-right: -50px"
-                        class="fa-solid fa-chevron-down"
+                        class="fa-solid fa-chevron-down sideDropIcon"
                       >
                       </i>
                     </div>
                     <div class="sideDrop">
-                      <ul>
+                      <ul class="d-none">
                         <li><a href="">Cart</a></li>
                         <li><a href="">Checkout</a></li>
                         <li><a href="">My account</a></li>
@@ -354,12 +358,12 @@
                       <a href="">Shop Layouts</a>
                       <i
                         style="margin-right: -50px"
-                        class="fa-solid fa-chevron-down"
+                        class="fa-solid fa-chevron-down sideDropIcon"
                       >
                       </i>
                     </div>
                     <div class="sideDrop">
-                      <ul>
+                      <ul class="d-none">
                         <li><a href="">Two Columns</a></li>
                         <li><a href="">Three Columns</a></li>
                         <li><a href="">Three Columns Wide</a></li>
@@ -385,10 +389,10 @@
             <li>
               <div class="d-flex align-items-center justify-content-between">
                 <a href="">Men</a>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down sideDropIcon"></i>
               </div>
               <div class="sideDrop">
-                <ul>
+                <ul class="d-none">
                   <li><a href="">Jackets & coats</a></li>
                   <li><a href="">Jeans</a></li>
                   <li><a href="">Knit</a></li>
@@ -404,10 +408,10 @@
             <li>
               <div class="d-flex align-items-center justify-content-between">
                 <a href="">Women</a>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down sideDropIcon"></i>
               </div>
               <div class="sideDrop">
-                <ul>
+                <ul class="d-none">
                   <li><a href="">Blazers</a></li>
                   <li><a href="">Blouses & shirts</a></li>
                   <li><a href="">Dresses</a></li>
@@ -454,6 +458,11 @@
             <li><a href="">Ready to Wear</a></li>
             <li><a href="">All For Men</a></li>
           </ul>
+
+          <span class="copyright">
+            Copyright 2023 © Clotya WordPress Theme. All right reserved. Powered
+            by KLBTheme.
+          </span>
         </div>
       </div>
 
@@ -475,6 +484,8 @@
           </div>
         </div>
       </div>
+
+      <div class="overlay d-none"></div>
     </header>
     <!-- Header ends -->
 
