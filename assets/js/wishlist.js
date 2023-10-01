@@ -16,14 +16,6 @@ navSocial.addEventListener("click", function () {
   navDropdownSocial.classList.toggle("d-none");
 });
 
-// window.addEventListener("click", function () {
-//   if (navDropdownSocial.classList.contains("d-none")) {
-//     navDropdownSocial.classList.toggle("d-none");
-//   } else {
-
-//   }
-// });
-
 language.addEventListener("mouseover", function (e) {
   e.preventDefault();
   dropDownLang.classList.toggle("d-none");

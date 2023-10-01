@@ -123,7 +123,7 @@
                 <ul class="d-flex align-items-center">
                   <li>
                     <div class="mouseOverHeight d-flex align-items-center">
-                      <a class="dropHome" href=""
+                      <a class="dropHome" href="home.html"
                         >HOME <i class="fa-solid fa-chevron-down"></i
                       ></a>
                       <div class="nav-bottom_menu--home d-none">
@@ -140,7 +140,7 @@
                   </li>
                   <li>
                     <div class="mouseOverHeight d-flex align-items-center">
-                      <a class="dropShop" href=""
+                      <a class="dropShop" href="shop.html"
                         >SHOP <i class="fa-solid fa-chevron-down"></i>
                       </a>
                       <div class="nav-bottom_menu--shop d-none">
@@ -203,15 +203,15 @@
                   <li><a href="">WOMEN</a></li>
                   <li><a href="">MEN</a></li>
                   <li><a href="">OUTERWEAR</a></li>
-                  <li><a href="">BLOG</a></li>
-                  <li><a href="">CONTACT </a></li>
+                  <li><a href="blog.html">BLOG</a></li>
+                  <li><a href="contact.html">CONTACT </a></li>
                 </ul>
               </div>
             </div>
             <div class="col-3 d-flex justify-content-end">
               <div class="nav-bottom_right d-flex align-items-center">
                 <div class="right-icons">
-                  <a href="">
+                  <a href="login.html">
                     <i class="fa-regular fa-user"></i>
                   </a>
 
@@ -220,7 +220,7 @@
                     <i class="fa-solid fa-x search-close d-none"></i>
                   </a>
 
-                  <a style="position: relative" href="">
+                  <a style="position: relative" href="wishlist.html">
                     <i class="fa-regular fa-heart"></i>
                     <span class="wishList-count">0</span>
                   </a>
@@ -228,7 +228,7 @@
 
                 <div class="right-basket">
                   <span>$0.00</span>
-                  <a style="position: relative" href="">
+                  <a style="position: relative" href="cart.html">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="wishList-count">0</span>
                   </a>
@@ -490,8 +490,106 @@
     <!-- Header ends -->
 
     <!-- Main starts -->
-
-    <p>
+    <main>
+      <section id="homeSlider">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-text">
+                <h4>WINTER 2022 COLLECTION</h4>
+                <h2>Making someone feel pretty is an art</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="shop.html"
+                  >Shop Collection <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+              </div>
+              <img
+                src="./assets/images/slider-1.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-text">
+                <h4>WINTER 2022 COLLECTION</h4>
+                <h2>Valentin Paul Essential Collection</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="shop.html"
+                  >Shop Collection <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+              </div>
+              <img
+                src="./assets/images/slider-2.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-text">
+                <h4>WINTER 2022 COLLECTION</h4>
+                <h2>Valentin Paul Essential Collection</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+                <a href="shop.html"
+                  >Shop Collection <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+              </div>
+              <img
+                src="./assets/images/slider-3.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum unde atque
       ipsum? Soluta nobis ullam assumenda, nostrum iste eaque molestiae dolorem
       ab quas illum unde fuga vitae culpa atque sint inventore doloribus
@@ -1028,7 +1126,7 @@
       obcaecati explicabo quam quibusdam reprehenderit ducimus corporis, quaerat
       maiores, alias doloremque omnis? In, consequuntur voluptatum consectetur
       eos dolorem similique reprehenderit aliquam!
-    </p>
+    </p> -->
     <!-- Main ends -->
 
     <!-- Footer starts -->
@@ -1149,27 +1247,21 @@
       </div>
     </footer>
     <!-- Footer ends -->
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
     ></script>
     <script src="./assets/js/home.js"></script>
   </body>
