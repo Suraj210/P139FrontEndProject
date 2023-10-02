@@ -280,6 +280,80 @@ a {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
   }
+  #contact .contact-img img {
+    width: 100%;
+  }
+  #contact .contact-content {
+    position: relative;
+  }
+  #contact .contact-content .contact-right {
+    padding: 60px;
+    background-color: white;
+    width: 70%;
+    position: absolute;
+    top: -150px;
+  }
+  #contact .contact-content .contact-right .contact-right--text h4 {
+    color: #ee403d;
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+  #contact .contact-content .contact-right .contact-right--text h1 {
+    font-weight: 500;
+    line-height: 1.2em;
+  }
+  #contact .contact-content .contact-right .contact-right--text p {
+    line-height: 1.5em;
+  }
+  #contact .contact-content .contact-right .contact-right--form {
+    padding-top: 40px;
+  }
+  #contact .contact-content .contact-right .contact-right--form form input {
+    width: 100%;
+    padding: 8px 15px;
+    outline-color: black;
+    border: 1px solid rgb(214, 214, 214);
+    margin-bottom: 30px;
+  }
+  #contact .contact-content .contact-right .contact-right--form form textarea {
+    width: 100%;
+    outline-color: black;
+    border: 1px solid rgb(214, 214, 214);
+  }
+  #contact .contact-content .contact-right .contact-right--form form button {
+    margin-top: 20px;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+  }
+  #contact .contact-content .contact-right .contact-right--form form p {
+    padding-top: 80px;
+  }
+  #contact .contact-content .contact-left {
+    height: 830px;
+    padding: 40px 0;
+  }
+  #contact .contact-content .contact-left .contact-left--content {
+    margin-top: 40px;
+    justify-content: end;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-icon {
+    margin-right: 20px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-icon i {
+    font-size: 20px;
+    color: red;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-detail h4 {
+    font-size: 16px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-detail p {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 250px;
+  }
   footer .topFooter {
     background-color: black;
     padding: 80px;
@@ -353,12 +427,246 @@ a {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   header .nav-top {
     display: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding-bottom: 15px;
   }
-  header .nav-bottom_menu {
+  header .nav-top .nav-top_social {
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  header .nav-top .nav-top_social i {
+    font-size: 15px;
+  }
+  header .nav-top .nav-top_social p {
+    margin-left: 10px;
+  }
+  header .nav-top .nav-top_message p a {
+    color: red;
+  }
+  header .nav-top .nav-top_social--dropDown {
+    width: 230px;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    top: 53px;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 30px;
+    background-color: white;
+    z-index: 2;
+  }
+  header .nav-top .nav-top_social--dropDown li {
+    font-size: 15px;
+  }
+  header .nav-top .nav-top_social--dropDown li i {
+    margin-right: 10px;
+  }
+  header .nav-top .nav-top_social--dropDown p {
+    padding: 20px 0;
+    margin-left: 0px !important;
+  }
+  header .nav-top .col-3 {
+    padding: 0;
+  }
+  header .nav-top .col-3 a {
+    color: black;
+  }
+  header .nav-top .col-3 .dropDownLang {
+    width: 120px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    z-index: 2;
+  }
+  header .nav-top .col-3 .dropDownLang ul li {
+    padding: 10px;
+  }
+  header .nav-top .col-3 .dropDownCurr {
+    width: 120px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    z-index: 2;
+  }
+  header .nav-top .col-3 .dropDownCurr ul li {
+    padding: 10px;
+  }
+  header .nav-bottom {
+    border-bottom: 1px solid rgb(214, 214, 214);
+  }
+  header .nav-bottom .sideBar-logo .fa-bars {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header .nav-bottom .nav-logo {
+    width: 15%;
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+  header .nav-bottom .nav-logo img {
+    width: 100%;
+  }
+  header .nav-bottom .nav-bottom_menu {
     display: none;
   }
-  header .right-icons {
+  header .nav-bottom .nav-bottom_menu ul li {
+    position: relative;
+    margin-right: 30px;
+  }
+  header .nav-bottom .nav-bottom_menu ul li a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--home {
+    width: 220px;
+    background-color: red;
+    position: absolute;
+    top: 98px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    z-index: 2;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--home ul {
+    margin-left: 20px;
+    line-height: 40px;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--shop {
+    width: 1320px;
+    top: 100px;
+    margin-left: -330px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    z-index: 2;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--shop a {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  header .nav-bottom .nav-bottom_right .right-icons {
     display: none;
+  }
+  header .nav-bottom .nav-bottom_right .right-icons i {
+    font-size: 23px;
+    margin-left: 20px;
+  }
+  header .nav-bottom .nav-bottom_right .right-basket {
+    margin-left: 10px;
+  }
+  header .nav-bottom .nav-bottom_right .right-basket i {
+    font-size: 23px;
+  }
+  header .nav-bottom .nav-bottom_right .wishList-count {
+    background-color: red;
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    padding: 2px;
+    right: -7px;
+    top: -10px;
+  }
+  header .nav-search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+  }
+  header .nav-search div {
+    padding: 20px 0;
+  }
+  header .nav-search div p {
+    padding-bottom: 20px;
+  }
+  header .nav-search div input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    transition: all 0.2s;
+  }
+  header .nav-search div input:focus {
+    border-bottom: 2px solid black;
+  }
+  header .nav-search div span {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+  header .nav-bottom_sideBar {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 320px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding-top: 20px;
+    transition: all 0.8s;
+  }
+  header .nav-bottom_sideBar .sideBar-logo {
+    padding: 0 20px;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBarImg {
+    width: 35%;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBarImg img {
+    width: 100%;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBar-close {
+    background-color: gray;
+    color: black;
+    padding: 5px 7px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBar-close i {
+    font-size: 15px;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu {
+    padding: 20px 20px;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu span {
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu ul li {
+    position: relative;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu ul li a {
+    line-height: 50px;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu ul li i {
+    cursor: pointer;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu .sideBar-offer span {
+    background-color: green;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu .copyright {
+    padding: 40px 0;
+  }
+  header .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
   }
   footer .topFooter {
     background-color: black;
@@ -433,17 +741,320 @@ a {
   footer .bottomFooter .footer-end a {
     font-size: 14px;
     margin-left: 10px;
+  }
+  #contact .contact-img img {
+    width: 100%;
+  }
+  #contact .contact-content {
+    position: initial;
+  }
+  #contact .contact-content .contact-right {
+    margin-top: 60px;
+    background-color: white;
+  }
+  #contact .contact-content .contact-right .contact-right--text h4 {
+    color: #ee403d;
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+  #contact .contact-content .contact-right .contact-right--text h1 {
+    font-weight: 500;
+    line-height: 1.2em;
+  }
+  #contact .contact-content .contact-right .contact-right--text p {
+    line-height: 1.5em;
+  }
+  #contact .contact-content .contact-right .contact-right--form {
+    padding-top: 40px;
+  }
+  #contact .contact-content .contact-right .contact-right--form form input {
+    width: 100%;
+    padding: 8px 15px;
+    outline-color: black;
+    border: 1px solid rgb(214, 214, 214);
+    margin-bottom: 30px;
+  }
+  #contact .contact-content .contact-right .contact-right--form form textarea {
+    width: 100%;
+    outline-color: black;
+    border: 1px solid rgb(214, 214, 214);
+  }
+  #contact .contact-content .contact-right .contact-right--form form button {
+    margin-top: 20px;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+  }
+  #contact .contact-content .contact-right .contact-right--form form p {
+    padding-top: 80px;
+  }
+  #contact .contact-content .contact-left {
+    padding: 40px 0;
+  }
+  #contact .contact-content .contact-left .contact-left--content {
+    margin-top: 40px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-icon {
+    margin-right: 20px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-icon i {
+    font-size: 20px;
+    color: red;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-detail h4 {
+    font-size: 16px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-detail p {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 576px) {
   header .nav-top {
     display: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding-bottom: 15px;
   }
-  header .nav-bottom_menu {
+  header .nav-top .nav-top_social {
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  header .nav-top .nav-top_social i {
+    font-size: 15px;
+  }
+  header .nav-top .nav-top_social p {
+    margin-left: 10px;
+  }
+  header .nav-top .nav-top_message p a {
+    color: red;
+  }
+  header .nav-top .nav-top_social--dropDown {
+    width: 230px;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    top: 53px;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 30px;
+    background-color: white;
+    z-index: 2;
+  }
+  header .nav-top .nav-top_social--dropDown li {
+    font-size: 15px;
+  }
+  header .nav-top .nav-top_social--dropDown li i {
+    margin-right: 10px;
+  }
+  header .nav-top .nav-top_social--dropDown p {
+    padding: 20px 0;
+    margin-left: 0px !important;
+  }
+  header .nav-top .col-3 {
+    padding: 0;
+  }
+  header .nav-top .col-3 a {
+    color: black;
+  }
+  header .nav-top .col-3 .dropDownLang {
+    width: 120px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    z-index: 2;
+  }
+  header .nav-top .col-3 .dropDownLang ul li {
+    padding: 10px;
+  }
+  header .nav-top .col-3 .dropDownCurr {
+    width: 120px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    z-index: 2;
+  }
+  header .nav-top .col-3 .dropDownCurr ul li {
+    padding: 10px;
+  }
+  header .nav-bottom {
+    border-bottom: 1px solid rgb(214, 214, 214);
+  }
+  header .nav-bottom .sideBar-logo .fa-bars {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header .nav-bottom .nav-logo {
+    width: 15%;
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+  header .nav-bottom .nav-logo img {
+    width: 100%;
+  }
+  header .nav-bottom .nav-bottom_menu {
     display: none;
   }
-  header .right-icons {
+  header .nav-bottom .nav-bottom_menu ul li {
+    position: relative;
+    margin-right: 30px;
+  }
+  header .nav-bottom .nav-bottom_menu ul li a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--home {
+    width: 220px;
+    background-color: red;
+    position: absolute;
+    top: 98px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    z-index: 2;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--home ul {
+    margin-left: 20px;
+    line-height: 40px;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--shop {
+    width: 1320px;
+    top: 100px;
+    margin-left: -330px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 214);
+    position: absolute;
+    z-index: 2;
+  }
+  header .nav-bottom .nav-bottom_menu ul li .nav-bottom_menu--shop a {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  header .nav-bottom .nav-bottom_right .right-icons {
     display: none;
+  }
+  header .nav-bottom .nav-bottom_right .right-icons i {
+    font-size: 23px;
+    margin-left: 20px;
+  }
+  header .nav-bottom .nav-bottom_right .right-basket {
+    margin-left: 10px;
+  }
+  header .nav-bottom .nav-bottom_right .right-basket i {
+    font-size: 23px;
+  }
+  header .nav-bottom .nav-bottom_right .wishList-count {
+    background-color: red;
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    padding: 2px;
+    right: -7px;
+    top: -10px;
+  }
+  header .nav-search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+  }
+  header .nav-search div {
+    padding: 20px 0;
+  }
+  header .nav-search div p {
+    padding-bottom: 20px;
+  }
+  header .nav-search div input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    transition: all 0.2s;
+  }
+  header .nav-search div input:focus {
+    border-bottom: 2px solid black;
+  }
+  header .nav-search div span {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+  header .nav-bottom_sideBar {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 320px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding-top: 20px;
+    transition: all 0.8s;
+  }
+  header .nav-bottom_sideBar .sideBar-logo {
+    padding: 0 20px;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBarImg {
+    width: 35%;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBarImg img {
+    width: 100%;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBar-close {
+    background-color: gray;
+    color: black;
+    padding: 5px 7px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  header .nav-bottom_sideBar .sideBar-logo .sideBar-close i {
+    font-size: 15px;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu {
+    padding: 20px 20px;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu span {
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu ul li {
+    position: relative;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu ul li a {
+    line-height: 50px;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu ul li i {
+    cursor: pointer;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu .sideBar-offer span {
+    background-color: green;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+  }
+  header .nav-bottom_sideBar .sideBarMainMenu .copyright {
+    padding: 40px 0;
+  }
+  header .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
   }
   footer .topFooter {
     background-color: black;
@@ -518,5 +1129,71 @@ a {
   footer .bottomFooter .footer-end a {
     font-size: 14px;
     margin-left: 10px;
+  }
+  #contact .contact-img img {
+    width: 100%;
+  }
+  #contact .contact-content .contact-right {
+    margin-top: 60px;
+    background-color: white;
+  }
+  #contact .contact-content .contact-right .contact-right--text h4 {
+    color: #ee403d;
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+  #contact .contact-content .contact-right .contact-right--text h1 {
+    font-weight: 500;
+    line-height: 1.2em;
+  }
+  #contact .contact-content .contact-right .contact-right--text p {
+    line-height: 1.5em;
+  }
+  #contact .contact-content .contact-right .contact-right--form {
+    padding-top: 40px;
+  }
+  #contact .contact-content .contact-right .contact-right--form form input {
+    width: 100%;
+    padding: 8px 15px;
+    outline-color: black;
+    border: 1px solid rgb(214, 214, 214);
+    margin-bottom: 30px;
+  }
+  #contact .contact-content .contact-right .contact-right--form form textarea {
+    width: 100%;
+    outline-color: black;
+    border: 1px solid rgb(214, 214, 214);
+  }
+  #contact .contact-content .contact-right .contact-right--form form button {
+    margin-top: 20px;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+  }
+  #contact .contact-content .contact-right .contact-right--form form p {
+    padding-top: 80px;
+  }
+  #contact .contact-content .contact-left {
+    padding: 40px 0;
+  }
+  #contact .contact-content .contact-left .contact-left--content {
+    margin-top: 40px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-icon {
+    margin-right: 20px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-icon i {
+    font-size: 20px;
+    color: red;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-detail h4 {
+    font-size: 16px;
+  }
+  #contact .contact-content .contact-left .contact-left--content .left-content-detail p {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 250px;
   }
 }/*# sourceMappingURL=contact.css.map */
