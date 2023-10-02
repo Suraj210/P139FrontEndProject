@@ -46,6 +46,32 @@ a {
   color: gray;
 }
 
+// --------------------Account active ----------------------
+
+.active {
+  color: #000 !important;
+}
+
+.active-register {
+  transform: translateX(-500px);
+  transform: translateY(-345px);
+  transition: all 1s;
+}
+
+.deactive-register {
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.active-login {
+}
+
+.deactive-login {
+  transform: translateX(-500px);
+  visibility: hidden;
+  transition: transform 1.3s;
+}
+
 //--------------------Computer width ----------------------
 @media only screen and (min-width: 768px) {
   //--------------------Header starts ----------------------
@@ -349,6 +375,78 @@ a {
   }
 
   //--------------------Header ends ----------------------
+
+  //--------------------Account section ends ----------------------
+  #account {
+    .acc-container {
+      max-width: 520px;
+      // width: 60%;
+      height: 650px;
+      padding: 60px;
+      margin: 70px auto;
+      border: 1px solid red;
+
+      .acc-options {
+        width: 60%;
+        margin: 0 auto;
+        a {
+          font-size: 1.065rem;
+          font-weight: 600;
+          color: gray;
+        }
+
+        & a:nth-child(2) {
+          padding-left: 20px;
+        }
+
+        & a:nth-child(1) {
+          padding-left: 50px;
+        }
+      }
+
+      .acc-form--all {
+        .acc-form {
+          form {
+            input[type="text"] {
+              width: 100%;
+              padding: 5px;
+              outline-color: #000;
+              border: 1px solid rgb(214, 214, 214);
+            }
+
+            input[type="checkbox"] {
+              margin: 20px 0;
+            }
+
+            button {
+              width: 100%;
+              padding: 10px;
+              color: white;
+              background-color: #ee403d;
+              outline: none;
+              border: none;
+              margin-top: 20px;
+            }
+
+            a {
+              color: red;
+              margin-top: 20px;
+              transition: all 0.3s;
+              &:hover {
+                color: blue;
+              }
+            }
+
+            p {
+              margin: 20px 0;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+  //--------------------Account section starts -----------------
 
   //--------------------Footer starts ----------------------
 

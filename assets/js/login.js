@@ -106,3 +106,30 @@ overlay.addEventListener("click", function () {
 // -------------------- Header ends --------------------
 
 // Footer
+
+// Account
+
+let accountOptions = document.querySelectorAll(".acc-options a");
+
+accountOptions.forEach((opt) => {
+  opt.addEventListener("click", function (e) {
+    e.preventDefault();
+    let active = document.querySelector(".acc-options .active");
+    active.classList.remove("active");
+    this.classList.add("active");
+
+    let id = this.getAttribute("data-id");
+
+    let login = document.querySelector(".login");
+    let register = document.querySelector(".register");
+    if (id == 1) {
+      login.classList.remove("deactive-login");
+      register.classList.remove("active-register");
+      register.classList.add("deactive-register");
+    } else {
+      login.classList.add("deactive-login");
+      register.classList.add("active-register");
+      register.classList.remove("deactive-register");
+    }
+  });
+});
