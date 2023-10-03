@@ -845,6 +845,78 @@ a {
 
   //--------------------Header ends ----------------------
 
+  //--------------------Account section ends -----------------
+  #account {
+    .acc-container {
+      max-width: 520px;
+      // width: 40%;
+      height: 650px;
+      padding: 60px;
+      margin: 70px auto;
+      border: 1px solid rgb(214, 214, 214);
+      overflow: hidden;
+      .acc-options {
+        width: 60%;
+        margin: 0 auto;
+        a {
+          font-size: 1.065rem;
+          font-weight: 600;
+          color: gray;
+        }
+
+        & a:nth-child(2) {
+          padding-left: 20px;
+        }
+
+        & a:nth-child(1) {
+          padding-left: 50px;
+        }
+      }
+
+      .acc-form--all {
+        .acc-form {
+          form {
+            input[type="text"] {
+              width: 100%;
+              padding: 5px;
+              outline-color: #000;
+              border: 1px solid rgb(214, 214, 214);
+            }
+
+            input[type="checkbox"] {
+              margin: 20px 0;
+            }
+
+            button {
+              width: 100%;
+              padding: 10px;
+              color: white;
+              background-color: #ee403d;
+              outline: none;
+              border: none;
+              margin-top: 20px;
+            }
+
+            a {
+              color: red;
+              margin-top: 20px;
+              transition: all 0.3s;
+              &:hover {
+                color: blue;
+              }
+            }
+
+            p {
+              margin: 20px 0;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+  //--------------------Account section starts -----------------
+
   //--------------------Footer starts ----------------------
 
   footer {
@@ -1244,6 +1316,78 @@ a {
   }
 
   //--------------------Header ends ----------------------
+
+  //--------------------Account section ends ------------------
+  #account {
+    .acc-container {
+      max-width: 520px;
+      // width: 40%;
+      height: 650px;
+      padding: 60px;
+      margin: 70px auto;
+      border: 1px solid rgb(214, 214, 214);
+      overflow: hidden;
+      .acc-options {
+        width: 60%;
+        margin: 0 auto;
+        a {
+          font-size: 14px;
+          font-weight: 600;
+          color: gray;
+        }
+
+        & a:nth-child(2) {
+          // padding-left: 20px;
+        }
+
+        & a:nth-child(1) {
+          padding-left: 30px;
+        }
+      }
+
+      .acc-form--all {
+        .acc-form {
+          form {
+            input[type="text"] {
+              width: 100%;
+              padding: 5px;
+              outline-color: #000;
+              border: 1px solid rgb(214, 214, 214);
+            }
+
+            input[type="checkbox"] {
+              margin: 20px 0;
+            }
+
+            button {
+              width: 100%;
+              padding: 10px;
+              color: white;
+              background-color: #ee403d;
+              outline: none;
+              border: none;
+              margin-top: 20px;
+            }
+
+            a {
+              color: red;
+              margin-top: 20px;
+              transition: all 0.3s;
+              &:hover {
+                color: blue;
+              }
+            }
+
+            p {
+              margin: 20px 0;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+  //--------------------Account section starts -----------------
 
   //--------------------Footer starts ----------------------
 

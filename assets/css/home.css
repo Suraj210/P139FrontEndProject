@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +42,18 @@ a {
   font-size: 12px;
   font-weight: 400;
   color: gray;
+}
+
+.slick-prev::before {
+  content: "←";
+  color: black;
+  font-size: 30px;
+}
+
+.slick-next:before {
+  content: "→";
+  color: black;
+  font-size: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -187,7 +200,7 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
   }
   header .nav-search div {
@@ -303,6 +316,74 @@ a {
   }
   #homeSlider .carousel-text a i {
     margin-left: 20px;
+  }
+  #products {
+    padding: 60px 0;
+  }
+  #products .product-heading {
+    padding: 30px 0;
+  }
+  #products .product-heading p {
+    color: rgb(181, 177, 177);
+  }
+  #products .product-container {
+    padding-left: 40px;
+    margin-top: 30px;
+  }
+  #products .product-container .product {
+    position: relative;
+  }
+  #products .product-container .product .product--info {
+    margin: 15px 0;
+  }
+  #products .product-container .product .product--info .product-review i {
+    color: orange;
+  }
+  #products .product-container .product .product--info h3 {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin: 15px 0;
+  }
+  #products .product-container .product .product--info p {
+    font-weight: 500;
+  }
+  #products .product-container .product .product--info p span {
+    text-decoration: line-through;
+    color: rgb(181, 177, 177);
+  }
+  #products .product-container .product .product--icons {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    z-index: 1000;
+    display: none;
+  }
+  #products .product-container .product .product--icons li {
+    padding-bottom: 7px;
+  }
+  #products .product-container .product .product--icons li i {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s;
+  }
+  #products .product-container .product .product--icons li i:hover {
+    background-color: red;
+    color: white;
+  }
+  #products .product-container .product:hover .product--icons {
+    display: initial;
+  }
+  #products .product-container .product .product--discount {
+    color: green;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
   }
   footer .topFooter {
     background-color: black;

@@ -671,6 +671,59 @@ a {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
   }
+  #account .acc-container {
+    max-width: 520px;
+    height: 650px;
+    padding: 60px;
+    margin: 70px auto;
+    border: 1px solid rgb(214, 214, 214);
+    overflow: hidden;
+  }
+  #account .acc-container .acc-options {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #account .acc-container .acc-options a {
+    font-size: 1.065rem;
+    font-weight: 600;
+    color: gray;
+  }
+  #account .acc-container .acc-options a:nth-child(2) {
+    padding-left: 20px;
+  }
+  #account .acc-container .acc-options a:nth-child(1) {
+    padding-left: 50px;
+  }
+  #account .acc-container .acc-form--all .acc-form form input[type=text] {
+    width: 100%;
+    padding: 5px;
+    outline-color: #000;
+    border: 1px solid rgb(214, 214, 214);
+  }
+  #account .acc-container .acc-form--all .acc-form form input[type=checkbox] {
+    margin: 20px 0;
+  }
+  #account .acc-container .acc-form--all .acc-form form button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #ee403d;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+  }
+  #account .acc-container .acc-form--all .acc-form form a {
+    color: red;
+    margin-top: 20px;
+    transition: all 0.3s;
+  }
+  #account .acc-container .acc-form--all .acc-form form a:hover {
+    color: blue;
+  }
+  #account .acc-container .acc-form--all .acc-form form p {
+    margin: 20px 0;
+    text-align: justify;
+  }
   footer .topFooter {
     background-color: black;
     padding: 80px;
@@ -989,6 +1042,56 @@ a {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
+  }
+  #account .acc-container {
+    max-width: 520px;
+    height: 650px;
+    padding: 60px;
+    margin: 70px auto;
+    border: 1px solid rgb(214, 214, 214);
+    overflow: hidden;
+  }
+  #account .acc-container .acc-options {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #account .acc-container .acc-options a {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+  }
+  #account .acc-container .acc-options a:nth-child(1) {
+    padding-left: 30px;
+  }
+  #account .acc-container .acc-form--all .acc-form form input[type=text] {
+    width: 100%;
+    padding: 5px;
+    outline-color: #000;
+    border: 1px solid rgb(214, 214, 214);
+  }
+  #account .acc-container .acc-form--all .acc-form form input[type=checkbox] {
+    margin: 20px 0;
+  }
+  #account .acc-container .acc-form--all .acc-form form button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #ee403d;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+  }
+  #account .acc-container .acc-form--all .acc-form form a {
+    color: red;
+    margin-top: 20px;
+    transition: all 0.3s;
+  }
+  #account .acc-container .acc-form--all .acc-form form a:hover {
+    color: blue;
+  }
+  #account .acc-container .acc-form--all .acc-form form p {
+    margin: 20px 0;
+    text-align: justify;
   }
   footer .topFooter {
     background-color: black;

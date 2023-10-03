@@ -46,6 +46,20 @@ a {
   color: gray;
 }
 
+// Product
+
+.slick-prev::before {
+  content: "←";
+  color: black;
+  font-size: 30px;
+}
+
+.slick-next:before {
+  content: "→";
+  color: black;
+  font-size: 30px;
+}
+
 //--------------------Computer width ----------------------
 @media only screen and (min-width: 768px) {
   //--------------------Header starts ----------------------
@@ -238,7 +252,7 @@ a {
       position: fixed;
       width: 100%;
       height: 100%;
-      z-index: 1;
+      z-index: 10;
       background-color: white;
 
       div {
@@ -383,6 +397,89 @@ a {
       }
     }
   }
+
+  //--------------------Section product starts ----------------
+
+  #products {
+    padding: 60px 0;
+
+    .product-heading {
+      padding: 30px 0;
+      p {
+        color: rgb(181, 177, 177);
+      }
+    }
+
+    .product-container {
+      padding-left: 40px;
+      margin-top: 30px;
+      .product {
+        position: relative;
+        .swinger-container {
+          img {
+          }
+        }
+        .product--info {
+          margin: 15px 0;
+          .product-review {
+            i {
+              color: orange;
+            }
+          }
+          h3 {
+            font-size: 0.9375rem;
+            font-weight: 400;
+            margin: 15px 0;
+          }
+          p {
+            font-weight: 500;
+            span {
+              text-decoration: line-through;
+              color: rgb(181, 177, 177);
+            }
+          }
+        }
+        .product--icons {
+          position: absolute;
+          top: 10px;
+          right: 50px;
+          z-index: 1000;
+          display: none;
+          li {
+            padding-bottom: 7px;
+
+            i {
+              background-color: white;
+              border-radius: 50%;
+              padding: 10px;
+              transition: all 0.3s;
+              &:hover {
+                background-color: red;
+                color: white;
+              }
+            }
+          }
+        }
+
+        &:hover .product--icons {
+          display: initial;
+        }
+
+        .product--discount {
+          color: green;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          z-index: 1000;
+          background-color: white;
+          padding: 5px;
+          font-weight: 700;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  //--------------------Section product ends ----------------
 
   //--------------------Section home slider ends ---------------
 
