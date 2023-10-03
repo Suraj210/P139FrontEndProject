@@ -48,20 +48,23 @@ a {
 }
 
 .active-register {
-  transform: translateX(-500px);
-  transform: translateY(-345px);
-  transition: all 1s;
+  transform: translate(0px, -348px);
+  transition: all 0.4s;
 }
 
 .deactive-register {
-  visibility: hidden;
-  transition: all 1s;
+  transform: translate(506px, -348px);
+  transition: all 0.4s;
+}
+
+.active-login {
+  transform: translate(0px, 0px);
+  transition: all 0.4s;
 }
 
 .deactive-login {
-  transform: translateX(-500px);
-  visibility: hidden;
-  transition: transform 1.3s;
+  transform: translate(-490px, 0px);
+  transition: all 0.4s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -306,7 +309,8 @@ a {
     height: 650px;
     padding: 60px;
     margin: 70px auto;
-    border: 1px solid red;
+    border: 1px solid rgb(214, 214, 214);
+    overflow: hidden;
   }
   #account .acc-container .acc-options {
     width: 60%;

@@ -123,13 +123,18 @@ accountOptions.forEach((opt) => {
     let login = document.querySelector(".login");
     let register = document.querySelector(".register");
     if (id == 1) {
+      login.classList.add("active-login");
       login.classList.remove("deactive-login");
       register.classList.remove("active-register");
       register.classList.add("deactive-register");
+      register.style.visibility = "hidden";
+      login.style.visibility = "visible";
     } else {
       login.classList.add("deactive-login");
-      register.classList.add("active-register");
       register.classList.remove("deactive-register");
+      register.classList.add("active-register");
+      register.style.visibility = "visible";
+      login.style.visibility = "hidden";
     }
   });
 });
