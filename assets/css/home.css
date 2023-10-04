@@ -44,6 +44,69 @@ a {
   color: gray;
 }
 
+.product-heading {
+  padding: 30px 0;
+}
+.product-heading p {
+  color: rgb(181, 177, 177);
+}
+
+.product {
+  position: relative;
+}
+.product .product--info {
+  margin: 15px 0;
+}
+.product .product--info .product-review i {
+  color: orange;
+}
+.product .product--info h3 {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  margin: 15px 0;
+}
+.product .product--info p {
+  font-weight: 500;
+}
+.product .product--info p span {
+  text-decoration: line-through;
+  color: rgb(181, 177, 177);
+}
+.product .product--icons {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  z-index: 1000;
+  display: none;
+}
+.product .product--icons li {
+  padding-bottom: 7px;
+}
+.product .product--icons li i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+.product .product--icons li i:hover {
+  background-color: red;
+  color: white;
+}
+.product:hover .product--icons {
+  display: initial;
+}
+.product .product--discount {
+  color: green;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: white;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
 .slick-prev::before {
   content: "←";
   color: black;
@@ -54,6 +117,41 @@ a {
   content: "→";
   color: black;
   font-size: 30px;
+}
+
+.collection-right {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.collection-right .collection-right--text h4 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+}
+.collection-right .collection-right--text h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+.collection-right .collection-right--text p {
+  color: #75767c;
+  font-size: 17px;
+  line-height: 1.5em;
+  margin-top: 30px;
+}
+.collection-right .collection-right--text a {
+  padding: 10px 15px;
+  border: 1px solid #8f8f8f;
+  display: inline-block;
+  margin-top: 30px;
+  transition: all 0.4s;
+}
+.collection-right .collection-right--text a:hover {
+  color: white;
+  background-color: #8f8f8f;
 }
 
 @media only screen and (min-width: 768px) {
@@ -320,70 +418,105 @@ a {
   #products {
     padding: 60px 0;
   }
-  #products .product-heading {
-    padding: 30px 0;
-  }
-  #products .product-heading p {
-    color: rgb(181, 177, 177);
-  }
   #products .product-container {
     padding-left: 40px;
     margin-top: 30px;
+    margin-bottom: 100px;
   }
-  #products .product-container .product {
-    position: relative;
+  #collection {
+    padding: 60px 0;
   }
-  #products .product-container .product .product--info {
-    margin: 15px 0;
+  #collection .collection-left .collection-left--text {
+    margin: 30px 0 0 70px;
   }
-  #products .product-container .product .product--info .product-review i {
-    color: orange;
+  #collection .collection-left .collection-left--text p {
+    color: #75767c;
+    font-size: 16px;
+    line-height: 1.5em;
   }
-  #products .product-container .product .product--info h3 {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin: 15px 0;
-  }
-  #products .product-container .product .product--info p {
+  #collection .collection-left .collection-left--text h4 {
+    font-size: 15px;
     font-weight: 500;
+    line-height: 1.2em;
+    margin-top: 30px;
   }
-  #products .product-container .product .product--info p span {
-    text-decoration: line-through;
-    color: rgb(181, 177, 177);
+  #testimonial {
+    background-color: #edf2f9;
+    padding: 80px;
+    margin-top: 30px;
   }
-  #products .product-container .product .product--icons {
-    position: absolute;
-    top: 10px;
-    right: 50px;
-    z-index: 1000;
+  #testimonial .testimonial-container {
+    text-align: center;
+  }
+  #testimonial .testimonial-container .testimonial-text {
+    margin: 30px 0;
+  }
+  #testimonial .testimonial-container .testimonial-text p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.625rem;
+  }
+  #testimonial .testimonial-container .testimonial-sign h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    margin-top: 30px;
+  }
+  #brands {
+    padding: 40px;
+  }
+  #brands .slick-prev::before {
     display: none;
   }
-  #products .product-container .product .product--icons li {
-    padding-bottom: 7px;
+  #brands .slick-next:before {
+    display: none;
   }
-  #products .product-container .product .product--icons li i {
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-    transition: all 0.3s;
+  #brands .brand-img img {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.4s;
   }
-  #products .product-container .product .product--icons li i:hover {
-    background-color: red;
-    color: white;
+  #brands .brand-img img:hover {
+    opacity: 1;
   }
-  #products .product-container .product:hover .product--icons {
-    display: initial;
+  #collection-2 {
+    padding-top: 60px;
   }
-  #products .product-container .product .product--discount {
-    color: green;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    background-color: white;
-    padding: 5px;
-    font-weight: 700;
+  #collection-2 .collection-right {
+    padding: 50px;
+  }
+  #collection-2 .collection-right .collection-right--feedback {
+    padding-bottom: 50px;
+  }
+  #collection-2 .collection-right .collection-right--feedback i {
+    color: orange;
     font-size: 12px;
+  }
+  #collection-2 .collection-right .collection-right--feedback span {
+    font-size: 0.8125rem;
+    color: #75767c;
+    margin-left: 20px;
+  }
+  #collection-2 .collection-right .collection-right--feedback p {
+    color: #75767c;
+    margin-top: 30px;
+  }
+  #collection-2 .collection-right .collection-right--feedback h4 {
+    font-size: 0.9375rem;
+    margin-top: 30px;
+  }
+  #products-2 {
+    padding-bottom: 80px;
+  }
+  #products-2 .featured-products .product .product--info {
+    transform: translateY(-80px);
+    z-index: 1001;
+    background-color: white;
+    padding: 20px 120px 20px 20px;
   }
   footer .topFooter {
     background-color: black;
@@ -722,6 +855,82 @@ a {
   }
   #homeSlider .carousel-text a i {
     margin-left: 20px;
+  }
+  .slick-prev::before {
+    content: "←";
+    color: black;
+    font-size: 20px;
+  }
+  .slick-next:before {
+    content: "→";
+    color: black;
+    font-size: 20px;
+  }
+  #products {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  #products .product-heading p {
+    color: rgb(181, 177, 177);
+  }
+  #products .product-container {
+    padding-left: 40px;
+    margin-top: 30px;
+  }
+  #products .product-container .product {
+    position: relative;
+  }
+  #products .product-container .product .product--info {
+    margin: 15px 0;
+  }
+  #products .product-container .product .product--info .product-review i {
+    color: orange;
+  }
+  #products .product-container .product .product--info h3 {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin: 15px 0;
+  }
+  #products .product-container .product .product--info p {
+    font-weight: 500;
+  }
+  #products .product-container .product .product--info p span {
+    text-decoration: line-through;
+    color: rgb(181, 177, 177);
+  }
+  #products .product-container .product .product--icons {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    z-index: 1000;
+    display: none;
+  }
+  #products .product-container .product .product--icons li {
+    padding-bottom: 7px;
+  }
+  #products .product-container .product .product--icons li i {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s;
+  }
+  #products .product-container .product .product--icons li i:hover {
+    background-color: red;
+    color: white;
+  }
+  #products .product-container .product:hover .product--icons {
+    display: initial;
+  }
+  #products .product-container .product .product--discount {
+    color: green;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
   }
   footer .topFooter {
     background-color: black;
@@ -1065,6 +1274,81 @@ a {
   }
   #homeSlider .carousel-text a i {
     margin-left: 20px;
+  }
+  .slick-prev::before {
+    content: "";
+    display: none;
+  }
+  .slick-next:before {
+    content: "";
+    display: none;
+  }
+  #products {
+    padding: 60px 0;
+  }
+  #products .product-heading {
+    padding: 30px 0;
+  }
+  #products .product-heading p {
+    color: rgb(181, 177, 177);
+  }
+  #products .product-container {
+    margin-top: 30px;
+  }
+  #products .product-container .product {
+    position: relative;
+  }
+  #products .product-container .product .product--info {
+    margin: 15px 0;
+  }
+  #products .product-container .product .product--info .product-review i {
+    color: orange;
+  }
+  #products .product-container .product .product--info h3 {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin: 15px 0;
+  }
+  #products .product-container .product .product--info p {
+    font-weight: 500;
+  }
+  #products .product-container .product .product--info p span {
+    text-decoration: line-through;
+    color: rgb(181, 177, 177);
+  }
+  #products .product-container .product .product--icons {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    z-index: 1000;
+    display: none;
+  }
+  #products .product-container .product .product--icons li {
+    padding-bottom: 7px;
+  }
+  #products .product-container .product .product--icons li i {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s;
+  }
+  #products .product-container .product .product--icons li i:hover {
+    background-color: red;
+    color: white;
+  }
+  #products .product-container .product:hover .product--icons {
+    display: initial;
+  }
+  #products .product-container .product .product--discount {
+    color: green;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
   }
   footer .topFooter {
     background-color: black;
