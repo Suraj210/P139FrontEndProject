@@ -589,6 +589,117 @@ a {
   #news .news-container .news .news-text p {
     color: rgb(181, 177, 177);
   }
+  .boxs {
+    position: fixed;
+    z-index: 1102;
+    left: 140px;
+    top: 40px;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    padding: 50px 40px;
+  }
+  .boxs .image {
+    width: 66%;
+    margin-left: 60px;
+  }
+  .boxs .image img {
+    width: 100%;
+  }
+  .boxs .text-all {
+    margin-top: 20px;
+    width: 80%;
+  }
+  .boxs .text-all h1 {
+    font-family: Regular400;
+    font-size: 28px;
+  }
+  .boxs .text-all .reviews {
+    margin-bottom: 10px;
+  }
+  .boxs .text-all .reviews span {
+    font-family: Medium500;
+    font-size: 13px;
+  }
+  .boxs .text-all .reviews i {
+    color: #f9c300;
+    font-size: 10px;
+  }
+  .boxs .text-all h2 {
+    font-family: Medium500;
+    font-size: 20px;
+  }
+  .boxs .text-all p {
+    font-family: Regular400;
+    font-size: 14px;
+  }
+  .boxs .text-all .product-size span {
+    color: black;
+    padding: 7px 30px;
+    line-height: 43px;
+    border: 1px solid rgba(0, 0, 0, 0.259);
+  }
+  .boxs .text-all .stock {
+    font-family: Medium500;
+    font-size: 14px;
+    color: #47b486;
+    background-color: #e9fef5;
+    border-radius: 2px;
+    padding: 4px 10px;
+  }
+  .boxs .text-all .add-to-cart {
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+  .boxs .text-all .add-to-cart .count {
+    border: 1px solid #dee0ea;
+    padding: 10px 15px;
+  }
+  .boxs .text-all .add-to-cart .count i {
+    font-size: 12px;
+  }
+  .boxs .text-all .add-to-cart .count span {
+    margin: 0 8px;
+  }
+  .boxs .text-all .add-to-cart .button {
+    width: 80%;
+  }
+  .boxs .text-all .add-to-cart .button button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    transition: all 0.5s;
+  }
+  .boxs .text-all .add-to-cart .button button:hover {
+    background-color: #9f9f9f;
+  }
+  .boxs .text-all .add-to-wishlist a {
+    font-family: Regular400;
+    font-size: 14px;
+    color: black;
+    margin-right: 14px;
+  }
+  .boxs .text-all h4 {
+    font-family: Regular400;
+    font-size: 14px;
+    color: #dee0ea;
+  }
+  .boxs .text-all h4 span {
+    color: black;
+  }
+  .boxs .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: black;
+    border: 1px solid #dee0ea;
+    border-radius: 50%;
+    padding: 10px 12px;
+    cursor: pointer;
+  }
   footer .topFooter {
     background-color: black;
     padding: 80px;
