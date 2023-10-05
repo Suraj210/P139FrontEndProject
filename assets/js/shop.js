@@ -109,7 +109,6 @@ overlay.addEventListener("click", function () {
 
 // Shop section
 
-// let productDrop = document.querySelectorAll(".product-drop");
 let shopDropIcon = document.querySelectorAll(".product-drop-icon");
 
 shopDropIcon.forEach((elem) => {
@@ -157,3 +156,8 @@ shopDropIcon.forEach((elem) => {
     };
   });
 })();
+
+// Shop cards
+$(document).ready(function () {
+  $("div[data-slick]").slick();
+});

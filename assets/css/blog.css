@@ -383,6 +383,7 @@ h1 {
   }
   #blogContent .blogRight {
     background-color: white;
+    height: 100%;
   }
   #blogContent .blogRight .searchForm form {
     position: relative;
