@@ -439,6 +439,245 @@ a {
   }
 
   //--------------------Footer ends ----------------------
+
+  //--------------------Shop section starts ------------------
+  #shop {
+    padding: 90px 0;
+    .shop-left {
+      h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      .count {
+        font-size: 13px;
+        color: rgb(214, 214, 214);
+      }
+      input {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-color: rgb(214, 214, 214);
+      }
+      .product-categories {
+        margin-bottom: 3rem;
+        ul {
+          li {
+            margin-bottom: 0.5rem;
+
+            i {
+              z-index: 2000;
+            }
+          }
+        }
+
+        .product-drop {
+          position: relative;
+          background-color: white;
+          width: 80%;
+          left: 30px;
+        }
+      }
+      .filter-price {
+        margin-bottom: 3rem;
+        .filter-all {
+          margin-top: 3em;
+
+          .filter-price {
+            margin-top: 2rem;
+
+            .range-slider {
+              margin: auto;
+              position: relative;
+              height: 4em;
+              display: flex;
+              justify-content: space-between;
+
+              .filterBtn {
+                button {
+                  border: none;
+                  padding: 3px 10px;
+                }
+              }
+            }
+
+            .range-slider svg,
+            .range-slider input[type="range"] {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+            }
+
+            input[type="number"] {
+              border: 1px solid #ddd;
+              font-size: 1.6em;
+              -moz-appearance: textfield;
+              outline: none;
+            }
+
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
+
+            input[type="number"]:invalid,
+            input[type="number"]:out-of-range {
+              border: 2px solid #ff6347;
+            }
+
+            input[type="range"] {
+              -webkit-appearance: none;
+              width: 100%;
+            }
+
+            input[type="range"]:focus {
+              outline: none;
+            }
+
+            input[type="range"]:focus::-webkit-slider-runnable-track {
+              background: #ee403d;
+            }
+
+            input[type="range"]:focus::-ms-fill-lower {
+              background: #ee403d;
+            }
+
+            input[type="range"]:focus::-ms-fill-upper {
+              background: #ee403d;
+            }
+
+            input[type="range"]::-webkit-slider-runnable-track {
+              width: 100%;
+              height: 2px;
+              cursor: pointer;
+              animate: 0.2s;
+              background: #ee403d;
+              border-radius: 1px;
+              box-shadow: none;
+              border: 0;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+              z-index: 2;
+              position: relative;
+              box-shadow: 0px 0px 0px #000;
+              border: 1px solid #ee403d;
+              height: 13px;
+              width: 13px;
+              border-radius: 25px;
+              background: #ee403d;
+              cursor: pointer;
+              -webkit-appearance: none;
+              margin-top: -6px;
+            }
+
+            input[type="range"]::-moz-range-track {
+              width: 100%;
+              height: 5px;
+              cursor: pointer;
+              animate: 0.2s;
+              background: #ee403d;
+              border-radius: 1px;
+              box-shadow: none;
+              border: 0;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+              z-index: 2;
+              position: relative;
+              box-shadow: 0px 0px 0px #000;
+              border: 1px solid #ee403d;
+              height: 18px;
+              width: 18px;
+              border-radius: 25px;
+              background: #ee403d;
+              cursor: pointer;
+            }
+
+            input[type="range"]::-ms-track {
+              width: 100%;
+              height: 5px;
+              cursor: pointer;
+              animate: 0.2s;
+              background: transparent;
+              border-color: transparent;
+              color: transparent;
+            }
+
+            input[type="range"]::-ms-fill-lower,
+            input[type="range"]::-ms-fill-upper {
+              background: #ee403d;
+              border-radius: 1px;
+              box-shadow: none;
+              border: 0;
+            }
+
+            input[type="range"]::-ms-thumb {
+              z-index: 2;
+              position: relative;
+              box-shadow: 0px 0px 0px #000;
+              border: 1px solid #ee403d;
+              height: 18px;
+              width: 18px;
+              border-radius: 25px;
+              background: #ee403d;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .filter-color {
+        margin-bottom: 3rem;
+        ul {
+          li {
+            margin-bottom: 1rem;
+            font-size: 15px;
+            & div:first-child {
+              span {
+                position: relative;
+                width: 17px;
+                height: 17px;
+                background-color: red;
+                border-radius: 50%;
+                margin-right: 7px;
+                display: inline-block;
+                vertical-align: middle;
+                transition: 0.2s;
+                &:hover::after {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  background-color: rgba(0, 0, 0, 0.1);
+                  color: #fff;
+                  font-weight: normal;
+                  line-height: 1;
+                  opacity: 1;
+                  transition: opacity 0.2s ease;
+                  content: "\2713";
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .filter-size {
+        margin-bottom: 3rem;
+        ul {
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  //--------------------Shop section ends ----------------------
 }
 
 //--------------------Tablet width ----------------------
