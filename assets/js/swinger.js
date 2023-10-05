@@ -3,7 +3,7 @@ $.fn.swinger = function () {
     var $container = $(this);
     $container.css({
       position: "relative",
-      width: "95%",
+      width: "100%",
     });
     var $images = $container.find("img");
     $images.css({
