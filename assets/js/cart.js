@@ -127,7 +127,7 @@ if (basket.length == 0) {
   document
     .querySelector(".right-basket .wishList-count")
     .classList.add("d-none");
-  document.querySelector("main .price").classList.add("d-none");
+  document.querySelector("main .all-price").classList.add("d-none");
 }
 
 function basketCount() {
@@ -146,12 +146,14 @@ showBasketDatas(basket);
 function showBasketDatas(products) {
   let tableBody = document.querySelector(".table tbody");
   for (const item of products) {
-    tableBody.innerHTML += `<tr>
+    tableBody.innerHTML += `<tr">
         <td><img src="${item.image}" alt=""></td>
         <td>${item.name}</td>
-        <td><i data-id="${item.name}" class="fa-solid fa-minus" ></i><span>${
-      item.count
-    } </span><i data-id="${item.name}" class="fa-solid fa-plus "></i></td>
+     <td>
+        <i data-id="${item.name}" class="fa-solid fa-minus" ></i>
+        <span>${item.count} </span>
+        <i data-id="${item.name}" class="fa-solid fa-plus "></i>
+     </td>
         <td>${item.price} $</td>
         <td>${Math.round(item.price * item.count)} $</td>
         <td>
@@ -197,7 +199,7 @@ function deleteBasketItem() {
         document
           .querySelector(".right-basket .wishList-count")
           .classList.add("d-none");
-        document.querySelector(".all-price .price").classList.add("d-none");
+        document.querySelector(".all-price").classList.add("d-none");
         document
           .querySelector(".all-price .total-price")
           .classList.add("d-none");

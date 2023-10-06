@@ -499,26 +499,62 @@
           </div>
         </div>
       </section>
+
       <section id="cart">
-        <h1 class="text-center mt-3 mb-3">Products</h1>
         <div class="container">
-          <!-- <div class="alert alert-warning" role="alert">Not yet produts</div> -->
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Count</th>
-                <th>Price</th>
-                <th>Total</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <div class="all-price">
-            <h1 class="price">Total Price:</h1>
-            <span class="total-price"></span>
+          <div class="row">
+            <div class="col-lg-9">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 110px">Image</th>
+                    <th style="padding-left: 50px">Name</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="all-price">
+                <p>Cart totals</p>
+                <hr />
+
+                <div class="shipping-container">
+                  <p>Shipping</p>
+                  <ul>
+                    <li>
+                      <label for="">Free shipping</label>
+                      <input type="radio" name="" id="" />
+                    </li>
+                    <li>
+                      <label for="">Local pickup </label>
+                      <input type="radio" name="" id="" />
+                    </li>
+                    <li>
+                      <span>Shipping to <strong>AL.</strong> </span>
+                    </li>
+                    <li style="margin-top: 20px">
+                      <a href="">Change address</a>
+                    </li>
+                  </ul>
+                </div>
+                <hr />
+
+                <div class="price-container">
+                  <p class="price">Total:</p>
+                  <strong>
+                    <span style="font-size: 18px" class="total-price"></span>
+                  </strong>
+                </div>
+
+                <button class="checkoutBtn">Proceed to checkout</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
