@@ -46,6 +46,85 @@ a {
   color: gray;
 }
 
+// Overlay
+
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+// --------------------Shop cards ----------------------
+
+.product {
+  position: relative;
+  margin-bottom: 40px;
+  .product--info {
+    margin: 15px 0;
+    .product-review {
+      i {
+        color: orange;
+        font-size: 13px;
+      }
+    }
+    h3 {
+      font-size: 0.9375rem;
+      font-weight: 400;
+      margin: 15px 0;
+    }
+    p {
+      font-weight: 500;
+      span {
+        text-decoration: line-through;
+        color: rgb(181, 177, 177);
+      }
+    }
+  }
+  .product--icons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+    li {
+      padding-bottom: 7px;
+
+      i {
+        background-color: white;
+        border-radius: 50%;
+        padding: 6px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &:hover .product--icons {
+    display: initial;
+  }
+
+  .product--discount {
+    color: green;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 999;
+    background-color: white;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+}
+
 //--------------------Computer width ----------------------
 @media only screen and (min-width: 768px) {
   //--------------------Header starts ----------------------
@@ -268,6 +347,7 @@ a {
 
     // --------------------Side Bar ----------------------
     .nav-bottom_sideBar {
+      z-index: 1100;
       overflow-y: scroll;
       height: 100vh;
       width: 320px;
@@ -275,7 +355,6 @@ a {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 5;
       padding-top: 20px;
       transition: all 0.8s;
       .sideBar-logo {
@@ -333,18 +412,6 @@ a {
           padding: 40px 0;
         }
       }
-    }
-
-    .overlay {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 3;
     }
   }
 
@@ -439,6 +506,290 @@ a {
   }
 
   //--------------------Footer ends ----------------------
+
+  //----------- Product Details Section starts ----------------
+
+  #productDetails {
+    padding: 60px 0;
+    .detail-boxs {
+      background-color: white;
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+
+      .text-all {
+        margin-top: 20px;
+        width: 80%;
+        h1 {
+          font-size: 28px;
+        }
+        .reviews {
+          margin-bottom: 10px;
+          span {
+            font-weight: 500;
+            font-size: 13px;
+          }
+          i {
+            color: #f9c300;
+            font-size: 10px;
+          }
+        }
+        h2 {
+          font-weight: 500;
+
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        .product-size {
+          margin-top: 20px;
+
+          span {
+            color: black;
+            padding: 7px 30px;
+            line-height: 43px;
+            border: 1px solid rgba(0, 0, 0, 0.259);
+          }
+        }
+        .stock {
+          font-weight: 500;
+          margin-top: 20px;
+          display: inline-block;
+          font-size: 14px;
+          color: #47b486;
+          background-color: #e9fef5;
+          border-radius: 2px;
+          padding: 4px 10px;
+        }
+
+        .add-to-cart {
+          margin: 20px 0;
+          justify-content: space-between;
+          .count {
+            border: 1px solid #dee0ea;
+            padding: 10px;
+            i {
+              font-size: 12px;
+              cursor: pointer;
+            }
+            span {
+              margin: 0 18px;
+            }
+          }
+          .button {
+            width: 70%;
+            button {
+              width: 100%;
+              background-color: black;
+              color: white;
+              padding: 10px 0;
+              border: none;
+              transition: all 0.5s;
+              &:hover {
+                background-color: #9f9f9f;
+              }
+            }
+          }
+        }
+        .add-to-wishlist {
+          a {
+            font-family: Regular400;
+            font-size: 14px;
+            color: black;
+            margin-right: 14px;
+          }
+        }
+        h4 {
+          font-family: Regular400;
+          font-size: 14px;
+          color: #dee0ea;
+          span {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .detail-right {
+      width: 100%;
+      .views-card {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+        .img-views {
+          width: 20%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .content-views {
+          width: 100%;
+          margin-left: 20px;
+          h6 {
+            font-size: 12px;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .detailDescription {
+      padding-top: 80px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        & li:first-child {
+          color: black;
+        }
+        li {
+          font-size: 20px;
+          color: rgb(214, 214, 214);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .recently-viewed {
+      padding: 60px 0;
+    }
+  }
+
+  //---------------- Product Details Section ends ----------------
+
+  //-------------------- Modal starts ----------------
+
+  .boxs {
+    position: fixed;
+    z-index: 1102;
+    left: 140px;
+    top: 40px;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    padding: 50px 40px;
+
+    .image {
+      width: 66%;
+      margin-left: 60px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-all {
+      margin-top: 20px;
+      width: 80%;
+      h1 {
+        font-family: Regular400;
+        font-size: 28px;
+      }
+      .reviews {
+        margin-bottom: 10px;
+        span {
+          font-family: Medium500;
+          font-size: 13px;
+        }
+        i {
+          color: #f9c300;
+          font-size: 10px;
+        }
+      }
+      h2 {
+        font-family: Medium500;
+        font-size: 20px;
+      }
+      p {
+        font-family: Regular400;
+        font-size: 14px;
+      }
+      .product-size {
+        span {
+          color: black;
+          padding: 7px 30px;
+          line-height: 43px;
+          border: 1px solid rgba(0, 0, 0, 0.259);
+        }
+      }
+      .stock {
+        font-family: Medium500;
+        font-size: 14px;
+        color: #47b486;
+        background-color: #e9fef5;
+        border-radius: 2px;
+        padding: 4px 10px;
+      }
+
+      .add-to-cart {
+        margin: 20px 0;
+        justify-content: space-between;
+        .count {
+          border: 1px solid #dee0ea;
+          padding: 10px;
+          i {
+            font-size: 12px;
+          }
+          span {
+            margin: 0 8px;
+          }
+        }
+        .button {
+          width: 80%;
+          button {
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            transition: all 0.5s;
+            &:hover {
+              background-color: #9f9f9f;
+            }
+          }
+        }
+      }
+      .add-to-wishlist {
+        a {
+          font-family: Regular400;
+          font-size: 14px;
+          color: black;
+          margin-right: 14px;
+        }
+      }
+      h4 {
+        font-family: Regular400;
+        font-size: 14px;
+        color: #dee0ea;
+        span {
+          color: black;
+        }
+      }
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      color: black;
+      border: 1px solid #dee0ea;
+      border-radius: 50%;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+  }
+
+  //-------------------- Modal ends ----------------
 }
 
 //--------------------Tablet width ----------------------
@@ -838,6 +1189,290 @@ a {
   }
 
   //--------------------Footer ends ----------------------
+
+  //----------- Product Details Section starts ----------------
+
+  #productDetails {
+    padding: 60px 0;
+    .detail-boxs {
+      background-color: white;
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+
+      .text-all {
+        margin-top: 20px;
+        width: 80%;
+        h1 {
+          font-size: 28px;
+        }
+        .reviews {
+          margin-bottom: 10px;
+          span {
+            font-weight: 500;
+            font-size: 13px;
+          }
+          i {
+            color: #f9c300;
+            font-size: 10px;
+          }
+        }
+        h2 {
+          font-weight: 500;
+
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        .product-size {
+          margin-top: 20px;
+
+          span {
+            color: black;
+            padding: 7px 30px;
+            line-height: 43px;
+            border: 1px solid rgba(0, 0, 0, 0.259);
+          }
+        }
+        .stock {
+          font-weight: 500;
+          margin-top: 20px;
+          display: inline-block;
+          font-size: 14px;
+          color: #47b486;
+          background-color: #e9fef5;
+          border-radius: 2px;
+          padding: 4px 10px;
+        }
+
+        .add-to-cart {
+          margin: 20px 0;
+          justify-content: space-between;
+          .count {
+            border: 1px solid #dee0ea;
+            padding: 10px;
+            i {
+              font-size: 12px;
+              cursor: pointer;
+            }
+            span {
+              margin: 0 18px;
+            }
+          }
+          .button {
+            width: 70%;
+            button {
+              width: 100%;
+              background-color: black;
+              color: white;
+              padding: 10px 0;
+              border: none;
+              transition: all 0.5s;
+              &:hover {
+                background-color: #9f9f9f;
+              }
+            }
+          }
+        }
+        .add-to-wishlist {
+          a {
+            font-family: Regular400;
+            font-size: 14px;
+            color: black;
+            margin-right: 14px;
+          }
+        }
+        h4 {
+          font-family: Regular400;
+          font-size: 14px;
+          color: #dee0ea;
+          span {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .detail-right {
+      width: 100%;
+      .views-card {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+        .img-views {
+          width: 20%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .content-views {
+          width: 100%;
+          margin-left: 20px;
+          h6 {
+            font-size: 12px;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .detailDescription {
+      padding-top: 80px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        & li:first-child {
+          color: black;
+        }
+        li {
+          font-size: 20px;
+          color: rgb(214, 214, 214);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .recently-viewed {
+      padding: 60px 0;
+    }
+  }
+
+  //---------------- Product Details Section ends ----------------
+
+  //-------------------- Modal starts ----------------
+
+  .boxs {
+    position: fixed;
+    z-index: 1102;
+    left: 140px;
+    top: 40px;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    padding: 50px 40px;
+
+    .image {
+      width: 66%;
+      margin-left: 60px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-all {
+      margin-top: 20px;
+      width: 80%;
+      h1 {
+        font-family: Regular400;
+        font-size: 28px;
+      }
+      .reviews {
+        margin-bottom: 10px;
+        span {
+          font-family: Medium500;
+          font-size: 13px;
+        }
+        i {
+          color: #f9c300;
+          font-size: 10px;
+        }
+      }
+      h2 {
+        font-family: Medium500;
+        font-size: 20px;
+      }
+      p {
+        font-family: Regular400;
+        font-size: 14px;
+      }
+      .product-size {
+        span {
+          color: black;
+          padding: 7px 30px;
+          line-height: 43px;
+          border: 1px solid rgba(0, 0, 0, 0.259);
+        }
+      }
+      .stock {
+        font-family: Medium500;
+        font-size: 14px;
+        color: #47b486;
+        background-color: #e9fef5;
+        border-radius: 2px;
+        padding: 4px 10px;
+      }
+
+      .add-to-cart {
+        margin: 20px 0;
+        justify-content: space-between;
+        .count {
+          border: 1px solid #dee0ea;
+          padding: 10px;
+          i {
+            font-size: 12px;
+          }
+          span {
+            margin: 0 8px;
+          }
+        }
+        .button {
+          width: 80%;
+          button {
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            transition: all 0.5s;
+            &:hover {
+              background-color: #9f9f9f;
+            }
+          }
+        }
+      }
+      .add-to-wishlist {
+        a {
+          font-family: Regular400;
+          font-size: 14px;
+          color: black;
+          margin-right: 14px;
+        }
+      }
+      h4 {
+        font-family: Regular400;
+        font-size: 14px;
+        color: #dee0ea;
+        span {
+          color: black;
+        }
+      }
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      color: black;
+      border: 1px solid #dee0ea;
+      border-radius: 50%;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+  }
+
+  //-------------------- Modal ends ----------------
 }
 
 //--------------------Phone width ----------------------
@@ -1238,4 +1873,288 @@ a {
   }
 
   //--------------------Footer ends ----------------------
+
+  //----------- Product Details Section starts ----------------
+
+  #productDetails {
+    padding: 60px 0;
+    .detail-boxs {
+      background-color: white;
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+
+      .text-all {
+        margin-top: 20px;
+        width: 80%;
+        h1 {
+          font-size: 28px;
+        }
+        .reviews {
+          margin-bottom: 10px;
+          span {
+            font-weight: 500;
+            font-size: 13px;
+          }
+          i {
+            color: #f9c300;
+            font-size: 10px;
+          }
+        }
+        h2 {
+          font-weight: 500;
+
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        .product-size {
+          margin-top: 20px;
+
+          span {
+            color: black;
+            padding: 7px 30px;
+            line-height: 43px;
+            border: 1px solid rgba(0, 0, 0, 0.259);
+          }
+        }
+        .stock {
+          font-weight: 500;
+          margin-top: 20px;
+          display: inline-block;
+          font-size: 14px;
+          color: #47b486;
+          background-color: #e9fef5;
+          border-radius: 2px;
+          padding: 4px 10px;
+        }
+
+        .add-to-cart {
+          margin: 20px 0;
+          justify-content: space-between;
+          .count {
+            border: 1px solid #dee0ea;
+            padding: 10px;
+            i {
+              font-size: 12px;
+              cursor: pointer;
+            }
+            span {
+              margin: 0 18px;
+            }
+          }
+          .button {
+            width: 70%;
+            button {
+              width: 100%;
+              background-color: black;
+              color: white;
+              padding: 10px 0;
+              border: none;
+              transition: all 0.5s;
+              &:hover {
+                background-color: #9f9f9f;
+              }
+            }
+          }
+        }
+        .add-to-wishlist {
+          a {
+            font-family: Regular400;
+            font-size: 14px;
+            color: black;
+            margin-right: 14px;
+          }
+        }
+        h4 {
+          font-family: Regular400;
+          font-size: 14px;
+          color: #dee0ea;
+          span {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .detail-right {
+      width: 100%;
+      .views-card {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+        .img-views {
+          width: 20%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .content-views {
+          width: 100%;
+          margin-left: 20px;
+          h6 {
+            font-size: 12px;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .detailDescription {
+      padding-top: 80px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        & li:first-child {
+          color: black;
+        }
+        li {
+          font-size: 20px;
+          color: rgb(214, 214, 214);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .recently-viewed {
+      padding: 60px 0;
+    }
+  }
+
+  //---------------- Product Details Section ends ----------------
+
+  //-------------------- Modal starts ----------------
+
+  .boxs {
+    position: fixed;
+    z-index: 1102;
+    left: 140px;
+    top: 40px;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    padding: 50px 40px;
+
+    .image {
+      width: 66%;
+      margin-left: 60px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-all {
+      margin-top: 20px;
+      width: 80%;
+      h1 {
+        font-family: Regular400;
+        font-size: 28px;
+      }
+      .reviews {
+        margin-bottom: 10px;
+        span {
+          font-family: Medium500;
+          font-size: 13px;
+        }
+        i {
+          color: #f9c300;
+          font-size: 10px;
+        }
+      }
+      h2 {
+        font-family: Medium500;
+        font-size: 20px;
+      }
+      p {
+        font-family: Regular400;
+        font-size: 14px;
+      }
+      .product-size {
+        span {
+          color: black;
+          padding: 7px 30px;
+          line-height: 43px;
+          border: 1px solid rgba(0, 0, 0, 0.259);
+        }
+      }
+      .stock {
+        font-family: Medium500;
+        font-size: 14px;
+        color: #47b486;
+        background-color: #e9fef5;
+        border-radius: 2px;
+        padding: 4px 10px;
+      }
+
+      .add-to-cart {
+        margin: 20px 0;
+        justify-content: space-between;
+        .count {
+          border: 1px solid #dee0ea;
+          padding: 10px;
+          i {
+            font-size: 12px;
+          }
+          span {
+            margin: 0 8px;
+          }
+        }
+        .button {
+          width: 80%;
+          button {
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            transition: all 0.5s;
+            &:hover {
+              background-color: #9f9f9f;
+            }
+          }
+        }
+      }
+      .add-to-wishlist {
+        a {
+          font-family: Regular400;
+          font-size: 14px;
+          color: black;
+          margin-right: 14px;
+        }
+      }
+      h4 {
+        font-family: Regular400;
+        font-size: 14px;
+        color: #dee0ea;
+        span {
+          color: black;
+        }
+      }
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      color: black;
+      border: 1px solid #dee0ea;
+      border-radius: 50%;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+  }
+
+  //-------------------- Modal ends ----------------
 }

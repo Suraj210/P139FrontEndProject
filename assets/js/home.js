@@ -217,7 +217,7 @@ openModalIcons.forEach((modalBox) => {
     );
 
     modal.children[0].children[0].nextElementSibling.children[0].children[0].innerText =
-      productName;
+      productText;
     console.log(productImg);
     console.log(productText);
   });
