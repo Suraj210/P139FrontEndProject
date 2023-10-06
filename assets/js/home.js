@@ -256,23 +256,7 @@ cardDetailBtn.forEach((detailBtn) => {
   });
 });
 
-// cardDetailIcon.forEach((detailBtn) => {
-//   detailBtn.addEventListener("click", function () {
-//     let cardName = this.nextElementSibling.children[1].innerText;
-//     let cardImg = this.children[0].children[0].getAttribute("src");
-
-//     basket.push({
-//       name: cardName,
-//       image: cardImg,
-//       count: 1,
-//     });
-
-//     localStorage.setItem("basket", JSON.stringify(basket));
-//   });
-// });
-
 // Get details to add to basket
-
 let addToBasket = [];
 
 let cardDetailIcons = document.querySelectorAll(".fa-bag-shopping");
@@ -291,9 +275,22 @@ if (addToBasket.length == 0) {
     .classList.add("d-none");
 }
 
+function basketCount() {
+  let basketCount = 0;
+  for (const item of addToBasket) {
+    basketCount += item.count;
+  }
+  return basketCount;
+}
+
+document.querySelector(".right-basket .wishList-count").innerText =
+  basketCount();
+
 cardDetailIcons.forEach((detailIcon) => {
   detailIcon.addEventListener("click", function (e) {
     e.preventDefault();
+
+    // Get product datas
     let productName =
       this.parentNode.parentNode.parentNode.parentNode.previousElementSibling
         .children[1].innerText;
@@ -303,9 +300,11 @@ cardDetailIcons.forEach((detailIcon) => {
 
     let productPrice;
     if (productPriceStr.length > 7) {
-      productPrice = productPriceStr.substring(7);
+      productPrice = parseFloat(
+        productPriceStr.substring(7).trim().substring(1)
+      );
     } else {
-      productPrice = productPriceStr;
+      productPrice = parseFloat(productPriceStr.trim().substring(1));
     }
 
     let productImg =
@@ -313,17 +312,29 @@ cardDetailIcons.forEach((detailIcon) => {
         "src"
       );
 
-    addToBasket.push({
-      image: productImg,
-      name: productName,
-      price: productPrice,
-      count: 1,
-    });
+    // Set product datas into the array
+
+    let existProduct = addToBasket.find((m) => m.name == productName);
+
+    if (existProduct != undefined) {
+      existProduct.count++;
+    } else {
+      addToBasket.push({
+        image: productImg,
+        name: productName,
+        price: productPrice,
+        count: 1,
+      });
+    }
 
     localStorage.setItem("addToBasket", JSON.stringify(addToBasket));
 
-    console.log(productName);
-    console.log(productPrice);
-    console.log(productImg);
+    // Increase
+
+    document.querySelector(".right-basket .wishList-count").innerText =
+      basketCount();
+    document
+      .querySelector(".right-basket .wishList-count")
+      .classList.remove("d-none");
   });
 });

@@ -490,7 +490,39 @@
 
     <!-- Main starts -->
 
-    <h1>Cart</h1>
+    <main>
+      <section class="d-none" id="empty-cart">
+        <div class="container">
+          <div class="cart-content">
+            <h6>Your cart is currently empty.</h6>
+            <a href="shop.html">Return To Shop</a>
+          </div>
+        </div>
+      </section>
+      <section id="cart">
+        <h1 class="text-center mt-3 mb-3">Products</h1>
+        <div class="container">
+          <!-- <div class="alert alert-warning" role="alert">Not yet produts</div> -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Count</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="all-price">
+            <h1 class="price">Total Price:</h1>
+            <span class="total-price"></span>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Main ends -->
 
