@@ -160,3 +160,42 @@ modalOverlay.addEventListener("click", function () {
   modalOverlay.classList.add("d-none");
   document.querySelector("body").style.overflow = "initial";
 });
+
+// Getting details for Product details
+
+let basket = [];
+
+let cardDetailBtn = document.querySelectorAll(".product a");
+
+cardDetailBtn.forEach((detailBtn) => {
+  detailBtn.addEventListener("click", function () {
+    let cardName = this.nextElementSibling.children[1].innerText;
+    let cardImg = this.children[0].children[0].getAttribute("src");
+
+    basket.push({
+      name: cardName,
+      image: cardImg,
+      count: 1,
+    });
+
+    localStorage.setItem("basket", JSON.stringify(basket));
+  });
+});
+
+// Set item details for Product details
+
+let card = document.querySelector(".detail-boxs");
+let details = [];
+details = JSON.parse(localStorage.getItem("basket"));
+
+if (localStorage.getItem("basket") != null) {
+  details = JSON.parse(localStorage.getItem("basket"));
+  for (const detail of details) {
+    card.children[0].children[1].children[0].children[0].innerText =
+      detail.name;
+    card.children[0].children[0].children[0].children[0].setAttribute(
+      "src",
+      detail.image
+    );
+  }
+}
