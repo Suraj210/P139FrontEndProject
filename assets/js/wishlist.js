@@ -106,3 +106,146 @@ overlay.addEventListener("click", function () {
 // -------------------- Header ends --------------------
 
 // Footer
+
+// Set product datas to wishlist
+let basket = [];
+
+if (localStorage.getItem("addToWishlist") != null) {
+  basket = JSON.parse(localStorage.getItem("addToWishlist"));
+  document.querySelector("#empty-cart").classList.add("d-none");
+} else {
+  document
+    .querySelector(".right-icons .wishList-count")
+    .classList.add("d-none");
+
+  document.querySelector("#cart .table").classList.add("d-none");
+  document.querySelector("#empty-cart").classList.remove("d-none");
+}
+
+if (basket.length == 0) {
+  document.querySelector("#cart .table").classList.add("d-none");
+  document.querySelector("#empty-cart").classList.remove("d-none");
+  document
+    .querySelector(".right-icons .wishList-count")
+    .classList.add("d-none");
+  document.querySelector("main .all-price").classList.add("d-none");
+}
+
+function basketCount() {
+  let basketCount = 0;
+  for (const item of basket) {
+    basketCount += item.count;
+  }
+  return basketCount;
+}
+
+document.querySelector(".right-icons .wishList-count").innerText =
+  basketCount();
+
+showBasketDatas(basket);
+
+function showBasketDatas(products) {
+  let tableBody = document.querySelector(".table tbody");
+  for (const item of products) {
+    tableBody.innerHTML += `<tr">
+        <td><img src="${item.image}" alt=""></td>
+        <td>${item.name}</td>
+     <td>
+        <i data-id="${item.name}" class="fa-solid fa-minus" ></i>
+        <span>${item.count} </span>
+        <i data-id="${item.name}" class="fa-solid fa-plus "></i>
+     </td>
+        <td>${item.price} $</td>
+        <td>${Math.round(item.price * item.count)} $</td>
+        <td>
+            <button data-id="${
+              item.name
+            }" class="btn btn-danger delete-btn">Delete</button>
+        </td>
+        </tr>`;
+  }
+  totalPrice();
+}
+
+function totalPrice() {
+  let total = 0;
+
+  for (const item of basket) {
+    total += Math.round(item.price * item.count);
+    document.querySelector("main .total-price").innerHTML = total + " $";
+  }
+}
+
+deleteBasketItem();
+
+function deleteBasketItem() {
+  let deleteBtns = document.querySelectorAll(".table button");
+  deleteBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      let productName = this.getAttribute("data-id");
+
+      let existProduct = basket.find((m) => m.name == productName);
+
+      basket = basket.filter((m) => m.name != existProduct.name);
+
+      localStorage.setItem("addToWishlist", JSON.stringify(basket));
+
+      document.querySelector(".right-icons .wishList-count").innerText =
+        basketCount();
+      this.parentNode.parentNode.remove();
+
+      if (basket.length == 0) {
+        document.querySelector("#cart .table").classList.add("d-none");
+        document.querySelector("#empty-cart").classList.remove("d-none");
+        document
+          .querySelector(".right-icons .wishList-count")
+          .classList.add("d-none");
+        document.querySelector(".all-price").classList.add("d-none");
+        document
+          .querySelector(".all-price .total-price")
+          .classList.add("d-none");
+      }
+      totalPrice();
+    });
+  });
+}
+
+let iconMinus = document.querySelectorAll(".fa-minus");
+
+let iconPlus = document.querySelectorAll(".fa-plus");
+
+iconPlus.forEach((plus) => {
+  plus.addEventListener("click", function () {
+    let productName = this.getAttribute("data-id");
+
+    let existProduct = basket.find((m) => m.name == productName);
+
+    existProduct.count++;
+
+    localStorage.setItem("addToWishlist", JSON.stringify(basket));
+    this.previousElementSibling.innerText = existProduct.count;
+    document.querySelector(".right-icons .wishList-count").innerText =
+      basketCount();
+    this.parentNode.nextElementSibling.nextElementSibling.innerText =
+      Math.round(existProduct.price * existProduct.count) + " $";
+    totalPrice();
+  });
+});
+
+iconMinus.forEach((plus) => {
+  plus.addEventListener("click", function () {
+    let productName = this.getAttribute("data-id");
+    let existProduct = basket.find((m) => m.name == productName);
+    if (existProduct.count > 1) {
+      existProduct.count--;
+
+      localStorage.setItem("addToWishlist", JSON.stringify(basket));
+      this.nextElementSibling.innerText = existProduct.count;
+      document.querySelector(".right-icons .wishList-count").innerText =
+        basketCount();
+      this.parentNode.nextElementSibling.nextElementSibling.innerText =
+        Math.round(existProduct.price * existProduct.count) + " $";
+      totalPrice();
+    }
+  });
+});

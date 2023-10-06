@@ -117,6 +117,7 @@ if (localStorage.getItem("addToBasket") != null) {
   document
     .querySelector(".right-basket .wishList-count")
     .classList.add("d-none");
+
   document.querySelector("#cart .table").classList.add("d-none");
   document.querySelector("#empty-cart").classList.remove("d-none");
 }

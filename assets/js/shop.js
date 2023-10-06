@@ -316,3 +316,88 @@ cardDetailIcons.forEach((detailIcon) => {
       .classList.remove("d-none");
   });
 });
+
+// Get details to add to wishlist
+let addToWishlist = [];
+
+let wishlistDetailIcons = document.querySelectorAll(
+  ".product--icons .fa-heart"
+);
+
+if (localStorage.getItem("addToWishlist") != null) {
+  addToWishlist = JSON.parse(localStorage.getItem("addToWishlist"));
+} else {
+  document
+    .querySelector(".right-icons .wishList-count")
+    .classList.add("d-none");
+}
+
+if (addToWishlist.length == 0) {
+  document
+    .querySelector(".right-icons .wishList-count")
+    .classList.add("d-none");
+}
+
+function wishListCount() {
+  let wishListCount = 0;
+  for (const item of addToWishlist) {
+    wishListCount += item.count;
+  }
+  return wishListCount;
+}
+
+document.querySelector(".right-icons .wishList-count").innerText =
+  wishListCount();
+
+wishlistDetailIcons.forEach((detailIcon) => {
+  detailIcon.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Get product datas
+    let productName =
+      this.parentNode.parentNode.parentNode.parentNode.previousElementSibling
+        .children[1].innerText;
+    let productPriceStr =
+      this.parentNode.parentNode.parentNode.parentNode.previousElementSibling
+        .children[2].innerText;
+
+    let productPrice;
+    if (productPriceStr.length > 7) {
+      productPrice = parseFloat(
+        productPriceStr.substring(7).trim().substring(1)
+      );
+    } else {
+      productPrice = parseFloat(productPriceStr.trim().substring(1));
+    }
+
+    let productImg =
+      this.parentNode.parentNode.parentNode.parentNode.previousElementSibling.previousElementSibling.children[0].children[0].getAttribute(
+        "src"
+      );
+
+    // Set product datas into the array
+
+    let existProduct = addToWishlist.find((m) => m.name == productName);
+
+    if (existProduct != undefined) {
+      existProduct.count++;
+    } else {
+      addToWishlist.push({
+        image: productImg,
+        name: productName,
+        price: productPrice,
+        count: 1,
+      });
+    }
+
+    localStorage.setItem("addToWishlist", JSON.stringify(addToWishlist));
+
+    // Increase
+
+    document.querySelector(".right-icons .wishList-count").innerText =
+      wishListCount();
+    document
+      .querySelector(".right-icons .wishList-count")
+      .classList.remove("d-none");
+  });
+});
