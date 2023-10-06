@@ -184,8 +184,8 @@ cardDetailBtn.forEach((detailBtn) => {
 
 // Set item details for Product details
 
-let card = document.querySelector(".detail-boxs");
 let details = [];
+let card = document.querySelector(".detail-boxs");
 details = JSON.parse(localStorage.getItem("basket"));
 
 if (localStorage.getItem("basket") != null) {

@@ -255,3 +255,75 @@ cardDetailBtn.forEach((detailBtn) => {
     localStorage.setItem("basket", JSON.stringify(basket));
   });
 });
+
+// cardDetailIcon.forEach((detailBtn) => {
+//   detailBtn.addEventListener("click", function () {
+//     let cardName = this.nextElementSibling.children[1].innerText;
+//     let cardImg = this.children[0].children[0].getAttribute("src");
+
+//     basket.push({
+//       name: cardName,
+//       image: cardImg,
+//       count: 1,
+//     });
+
+//     localStorage.setItem("basket", JSON.stringify(basket));
+//   });
+// });
+
+// Get details to add to basket
+
+let addToBasket = [];
+
+let cardDetailIcons = document.querySelectorAll(".fa-bag-shopping");
+
+if (localStorage.getItem("addToBasket") != null) {
+  addToBasket = JSON.parse(localStorage.getItem("addToBasket"));
+} else {
+  document
+    .querySelector(".right-basket .wishList-count")
+    .classList.add("d-none");
+}
+
+if (addToBasket.length == 0) {
+  document
+    .querySelector(".right-basket .wishList-count")
+    .classList.add("d-none");
+}
+
+cardDetailIcons.forEach((detailIcon) => {
+  detailIcon.addEventListener("click", function (e) {
+    e.preventDefault();
+    let productName =
+      this.parentNode.parentNode.parentNode.parentNode.previousElementSibling
+        .children[1].innerText;
+    let productPriceStr =
+      this.parentNode.parentNode.parentNode.parentNode.previousElementSibling
+        .children[2].innerText;
+
+    let productPrice;
+    if (productPriceStr.length > 7) {
+      productPrice = productPriceStr.substring(7);
+    } else {
+      productPrice = productPriceStr;
+    }
+
+    let productImg =
+      this.parentNode.parentNode.parentNode.parentNode.previousElementSibling.previousElementSibling.children[0].children[0].getAttribute(
+        "src"
+      );
+
+    addToBasket.push({
+      image: productImg,
+      name: productName,
+      price: productPrice,
+      count: 1,
+    });
+
+    localStorage.setItem("addToBasket", JSON.stringify(addToBasket));
+
+    console.log(productName);
+    console.log(productPrice);
+    console.log(productImg);
+  });
+});
