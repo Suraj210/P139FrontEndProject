@@ -89,7 +89,7 @@ sideDropIcon.forEach((drop) => {
 
 let sideBar = document.querySelector(".nav-bottom_sideBar");
 let sideBarToggle = document.querySelectorAll(".sideBarToggle");
-let overlay = document.querySelector(".overlay");
+let overlay = document.querySelector("header .overlay");
 
 sideBarToggle.forEach((elem) => {
   elem.addEventListener("click", function () {
@@ -184,36 +184,53 @@ $(document).ready(function () {
   });
 });
 
-// Modal
+//-------------------- Modal--------------------
 let modal = document.querySelector(".boxs");
 
 let openModalIcons = document.querySelectorAll(
   ".product .product--icons i:nth-child(2)"
 );
-let iconClose = document.querySelector(".boxs .close");
+let iconClose = document.querySelector(".boxs .close-modal");
+let modalOverlay = document.querySelector("main .overlay");
 
-openModalIcons.forEach((openModalIcon) => {
-  openModalIcon.onclick = function () {
+openModalIcons.forEach((modalBox) => {
+  modalBox.addEventListener("click", function () {
+    // Modal Display
     modal.classList.remove("d-none");
-    over.style.display = "block";
+    modalOverlay.classList.remove("d-none");
+    document.querySelector("body").style.overflow = "hidden";
+
+    // Product info
+
     let productImg =
-      this.parentNode.previousElementSibling.previousElementSibling.children[0].children[0].children[0].getAttribute(
+      this.parentNode.parentNode.parentNode.previousElementSibling.previousElementSibling.children[0].children[0].getAttribute(
         "src"
       );
+
+    let productText =
+      this.parentNode.parentNode.parentNode.previousElementSibling.children[1]
+        .innerText;
+
     modal.children[0].children[0].children[0].children[0].setAttribute(
       "src",
       productImg
     );
-    let productName =
-      this.parentNode.previousElementSibling.children[2].innerText;
+
     modal.children[0].children[0].nextElementSibling.children[0].children[0].innerText =
       productName;
-    body.style.overflowY = "hidden";
-  };
+    console.log(productImg);
+    console.log(productText);
+  });
 });
+
 iconClose.addEventListener("click", function () {
-  over.style.display = "none";
   modal.classList.add("d-none");
-  over.style.display = "none";
-  body.style.overflowY = "auto";
+  modalOverlay.classList.add("d-none");
+  document.querySelector("body").style.overflow = "initial";
+});
+
+modalOverlay.addEventListener("click", function () {
+  modal.classList.add("d-none");
+  modalOverlay.classList.add("d-none");
+  document.querySelector("body").style.overflow = "initial";
 });
